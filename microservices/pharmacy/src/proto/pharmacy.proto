@@ -1,0 +1,128 @@
+syntax = "proto3";
+
+package pharmacy;
+
+message Pharmacy {
+  int32 id = 1;
+  string logo = 2;
+  string nome = 3;
+  string cnpj = 4;
+  string endereco = 5;
+  string horarioDeFuncionamento = 6;
+  string responsavel = 7;
+  string telefone = 8;
+  string outros = 9;
+}
+
+message UpdatePharmacyData {
+  int32 id = 1;
+  string logo = 2;
+  string nome = 3;
+  string endereco = 4;
+  string horarioDeFuncionamento = 5;
+  string responsavel = 6;
+  string telefone = 7;
+  string outros = 8;
+}
+
+message CreatePharmacyRequest {
+  Pharmacy pharmacy = 1;
+}
+
+message GetPharmacyByNameRequest {
+  string nome = 1;
+  string page = 2;
+}
+
+message GetAllPharmacysRequest {
+  string page = 1;
+}
+
+message GetPharmacyByIdRequest {
+  int32 id = 1;
+}
+
+message UpdatePharmacyDataRequest {
+  int32 id = 1;
+  UpdatePharmacyData pharmacy = 2;
+}
+
+message PharmacyResponse {
+  Pharmacy pharmacy = 1;
+}
+
+message PharmacysListResponse {
+  repeated Pharmacy pharmacys = 1;
+}
+
+message Subsidiary {
+  int32 id = 1;
+  string logo = 2;
+  string nome = 3;
+  string cnpj = 4;
+  string endereco = 5;
+  string horarioDeFuncionamento = 6;
+  string responsavel = 7;
+  string telefone = 8;
+  string outros = 9;
+  int32 farmacia_id = 10;
+}
+
+message UpdateSubsidiaryData {
+  int32 id = 1;
+  string logo = 2;
+  string nome = 3;
+  string endereco = 4;
+  string horarioDeFuncionamento = 5;
+  string responsavel = 6;
+  string telefone = 7;
+  string outros = 8;
+}
+
+message CreateSubsidiaryRequest {
+  Subsidiary subsidiary = 1;
+}
+
+message GetSubsidiaryByNameRequest {
+  string nome = 1;
+  string page = 2;
+}
+
+message GetAllSubsidiarysRequest {
+  string page = 1;
+}
+
+message GetSubsidiaryByIdRequest {
+  int32 id = 1;
+}
+
+message UpdateSubsidiaryDataRequest {
+  int32 id = 1;
+  UpdateSubsidiaryData subsidiary = 2;
+}
+
+message SubsidiaryResponse {
+  Subsidiary subsidiary = 1;
+}
+
+message SubsidiarysListResponse {
+  repeated Subsidiary subsidiarys = 1;
+}
+
+message Empty {}
+
+service PharmacyService {
+  rpc createPharmacy(CreatePharmacyRequest) returns (PharmacyResponse) {};
+  rpc getPharmacyByName(GetPharmacyByNameRequest) returns (PharmacysListResponse) {};
+  rpc getAllPharmacys(GetAllPharmacysRequest) returns (PharmacysListResponse) {};
+  rpc updatePharmacyData(UpdatePharmacyDataRequest) returns (PharmacyResponse) {};
+  rpc deletePharmacy(GetPharmacyByIdRequest) returns (Empty) {};
+}
+
+service SubsidiaryService {
+  rpc createSubsidiary(CreateSubsidiaryRequest) returns (SubsidiaryResponse) {};
+  rpc getSubsidiaryByName(GetSubsidiaryByNameRequest) returns (SubsidiarysListResponse) {};
+  rpc getAllSubsidiarys(GetAllSubsidiarysRequest) returns (SubsidiarysListResponse) {};
+  rpc updateSubsidiaryData(UpdateSubsidiaryDataRequest) returns (SubsidiaryResponse) {};
+  rpc deleteSubsidiary(GetSubsidiaryByIdRequest) returns (Empty) {};
+}

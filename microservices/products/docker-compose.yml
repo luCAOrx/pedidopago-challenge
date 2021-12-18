@@ -1,0 +1,40 @@
+version: "3.8"
+
+services:
+  product_database:
+    image: mariadb
+    container_name: product_database
+    restart: always
+    ports:
+      - ${MARIADB_PORT}:3306
+    environment:
+      MARIADB_ROOT_USER: ${MARIADB_USER}
+      MARIADB_ROOT_PASSWORD: ${MARIADB_PASSWORD}
+      MARIADB_DATABASE: ${MARIADB_DATABASE}
+      MARIADB_ROOT_HOST: ${MARIADB_HOST}
+    networks:
+      - product_microservice
+
+  product_microservice:
+    image: node:alpine
+    container_name: product_microservice
+    restart: always
+    env_file:
+     - .env
+    depends_on:
+      - product_database
+    ports:
+      - "${SERVER_PORT}:${SERVER_PORT}"
+    working_dir: /usr/app
+    volumes:
+      - .:/usr/app
+    command: yarn start
+    networks:
+      - product_microservice
+      - api
+
+networks:
+  product_microservice:
+    driver: bridge         
+  api:
+    driver: bridge

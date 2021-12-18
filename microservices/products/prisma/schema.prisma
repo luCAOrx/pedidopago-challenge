@@ -1,0 +1,23 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "debian-openssl-1.1.x"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Products {
+  id              Int    @id @default(autoincrement())
+  thumbnail       String
+  nome            String
+  preco           String
+  ingredientes    String
+  disponibilidade String
+  volume          String
+  outros          String
+}
