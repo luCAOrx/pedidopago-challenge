@@ -9,7 +9,7 @@ O docker não está funcionando corretamente.
  - yarn
  
  ## Iniciando a aplicação
- Primeiramente em cada projeto, você precisa rodar o comando `yarn` para instalar todas as dependências.
+ Primeiramente em cada ditetório, você precisa rodar o comando `yarn` para instalar todas as dependências.
  
  Em desenvolvimento `yarn dev`
  
