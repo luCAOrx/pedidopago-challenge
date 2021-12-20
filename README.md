@@ -9,11 +9,9 @@ O docker não está funcionando corretamente.
  - yarn
  
  ## Iniciando a aplicação
- Primeiramente em cada ditetório, você precisa rodar o comando `yarn` para instalar todas as dependências.
+ Para instalar as dependências, entre no diretório api, microservice/pharmacy, microservice/products e execute o comando `yarn`.
  
- Em desenvolvimento `yarn dev`
- 
- Em produção `yarn start`
+ Para executar o projeto em desenvolvimento, execute `yarn dev`.
  
  ## Consumindo a aplicação
  Você pode utilizar o insomnia, postman ou outro de sua preferência para isso.
