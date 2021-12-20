@@ -20,6 +20,8 @@ O docker não está funcionando corretamente.
 
  ## Visualizando os dados no banco de dados
  Entre no diretório microservices/pharmacy, microservices/products e execute `yarn prisma studio`.
+
+ O prisma vai abrir uma guia em seu navegador, lá você poderá visualizar os dados.
  
  ## Rotas para a farmácia
  
