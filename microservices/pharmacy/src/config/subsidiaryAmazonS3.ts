@@ -4,4 +4,4 @@ export const subsidiaryAmazonS3Config = {
     secretAccessKey: String(process.env.AWS_SUBSIDIARY_SECRET_ACCESS_KEY)
   },
   region: process.env.AWS_SUBSIDIARY_DEFAULT_REGION
-};
+}

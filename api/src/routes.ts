@@ -1,75 +1,75 @@
-import { Router } from "express";
-import multer from "multer";
+import { Router } from 'express'
+import multer from 'multer'
 
-import { subsidiaryMulterConfig } from './config/subsidiaryMulter';
+import { subsidiaryMulterConfig } from './config/subsidiaryMulter'
 
-import { pharmacyMulterConfig } from './config/pharmacyMulter';
+import { pharmacyMulterConfig } from './config/pharmacyMulter'
 
-import { productMulterConfig } from './config/productMulter';
+import { productMulterConfig } from './config/productMulter'
 
-import { 
-  createPharmacy, 
-  deletePharmacy, 
-  getAllPharmacys, 
-  getPharmacyByName, 
+import {
+  createPharmacy,
+  deletePharmacy,
+  getAllPharmacys,
+  getPharmacyByName,
   updatePharmacyData
-} from './controllers/PharmacyController';
+} from './controllers/PharmacyController'
 
-import { 
-  createSubsidiary, 
-  deleteSubsidiary, 
-  getAllSubsidiarys, 
+import {
+  createSubsidiary,
+  deleteSubsidiary,
+  getAllSubsidiarys,
   getSubsidiaryByName,
   updateSubsidiaryData
-} from "./controllers/SubsidiaryController";
+} from './controllers/SubsidiaryController'
 
-import { 
-  cloneProduct, 
+import {
+  cloneProduct,
   createProduct,
   deleteProduct,
   getAllProducts,
   getProductsByName,
   updateProductData
-} from "./controllers/ProductController";
+} from './controllers/ProductController'
 
-const routes = Router();
+const routes = Router()
 
-const pharmacyUpload = multer(pharmacyMulterConfig);
+const pharmacyUpload = multer(pharmacyMulterConfig)
 
-const subsidiaryUpload = multer(subsidiaryMulterConfig);
+const subsidiaryUpload = multer(subsidiaryMulterConfig)
 
-const productUpload = multer(productMulterConfig);
+const productUpload = multer(productMulterConfig)
 
-routes.post('/createPharmacy', pharmacyUpload.single('logo'), createPharmacy);
+routes.post('/createPharmacy', pharmacyUpload.single('logo'), createPharmacy)
 
-routes.get('/getPharmacyByName', getPharmacyByName);
+routes.get('/getPharmacyByName', getPharmacyByName)
 
-routes.get('/getAllPharmacys', getAllPharmacys);
+routes.get('/getAllPharmacys', getAllPharmacys)
 
-routes.put('/updatePharmacyData/:id', pharmacyUpload.single('logo'), updatePharmacyData);
+routes.put('/updatePharmacyData/:id', pharmacyUpload.single('logo'), updatePharmacyData)
 
-routes.delete('/deletePharmacy/:id', deletePharmacy);
+routes.delete('/deletePharmacy/:id', deletePharmacy)
 
-routes.post('/createSubsidiary/:farmacia_id', subsidiaryUpload.single('logo'), createSubsidiary);
+routes.post('/createSubsidiary/:farmacia_id', subsidiaryUpload.single('logo'), createSubsidiary)
 
-routes.get('/getSubsidiaryByName', getSubsidiaryByName);
+routes.get('/getSubsidiaryByName', getSubsidiaryByName)
 
-routes.get('/getAllSubsidiarys', getAllSubsidiarys);
+routes.get('/getAllSubsidiarys', getAllSubsidiarys)
 
-routes.put('/updateSubsidiaryData/:id', subsidiaryUpload.single('logo'), updateSubsidiaryData);
+routes.put('/updateSubsidiaryData/:id', subsidiaryUpload.single('logo'), updateSubsidiaryData)
 
-routes.delete('/deleteSubsidiary/:id', deleteSubsidiary);
+routes.delete('/deleteSubsidiary/:id', deleteSubsidiary)
 
 routes.post('/createProduct', productUpload.single('thumbnail'), createProduct)
 
-routes.post('/cloneProduct/:id', cloneProduct);
+routes.post('/cloneProduct/:id', cloneProduct)
 
-routes.get('/getProductsByName', getProductsByName);
+routes.get('/getProductsByName', getProductsByName)
 
-routes.get('/getAllProducts', getAllProducts);
+routes.get('/getAllProducts', getAllProducts)
 
-routes.put('/updateProductData/:id', productUpload.single('thumbnail'), updateProductData);
+routes.put('/updateProductData/:id', productUpload.single('thumbnail'), updateProductData)
 
-routes.delete('/deleteProduct/:id', deleteProduct);
+routes.delete('/deleteProduct/:id', deleteProduct)
 
-export { routes };
+export { routes }

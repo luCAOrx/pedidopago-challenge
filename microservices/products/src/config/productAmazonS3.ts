@@ -4,4 +4,4 @@ export const productAmazonS3Config = {
     secretAccessKey: String(process.env.AWS_PRODUCTS_SECRET_ACCESS_KEY)
   },
   region: process.env.AWS_PRODUCTS_DEFAULT_REGION
-};
+}

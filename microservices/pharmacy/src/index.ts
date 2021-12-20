@@ -1,10 +1,10 @@
-import 'dotenv/config';
+import 'dotenv/config'
 
-import { loadPackageDefinition, Server, ServerCredentials } from '@grpc/grpc-js';
+import { loadPackageDefinition, Server, ServerCredentials } from '@grpc/grpc-js'
 
-import { loadSync } from '@grpc/proto-loader';
+import { loadSync } from '@grpc/proto-loader'
 
-import path from 'path';
+import path from 'path'
 
 import {
   createPharmacy,
@@ -12,7 +12,7 @@ import {
   getAllPharmacys,
   updatePharmacyData,
   deletePharmacy
-} from './implementations/pharmacy';
+} from './implementations/pharmacy'
 
 import {
   createSubsidiary,
@@ -20,9 +20,9 @@ import {
   getAllSubsidiarys,
   updateSubsidiaryData,
   deleteSubsidiary
-} from './implementations/subsidiary';
+} from './implementations/subsidiary'
 
-const pharmacyPath = path.resolve(__dirname, 'proto', 'pharmacy.proto');
+const pharmacyPath = path.resolve(__dirname, 'proto', 'pharmacy.proto')
 
 const options = {
   keepCase: true,
@@ -30,13 +30,13 @@ const options = {
   enums: String,
   defaults: true,
   oneofs: true
- }
+}
 
-const packageDefinition = loadSync(pharmacyPath, options);
-  
-const { pharmacy } = loadPackageDefinition(packageDefinition) as any;
+const packageDefinition = loadSync(pharmacyPath, options)
 
-const server = new Server();
+const { pharmacy } = loadPackageDefinition(packageDefinition) as any
+
+const server = new Server()
 
 server.addService(pharmacy.PharmacyService.service, {
   createPharmacy,
@@ -44,7 +44,7 @@ server.addService(pharmacy.PharmacyService.service, {
   getAllPharmacys,
   updatePharmacyData,
   deletePharmacy
-});
+})
 
 server.addService(pharmacy.SubsidiaryService.service, {
   createSubsidiary,
@@ -52,10 +52,8 @@ server.addService(pharmacy.SubsidiaryService.service, {
   getAllSubsidiarys,
   updateSubsidiaryData,
   deleteSubsidiary
-});
+})
 
 server.bindAsync(String(process.env.GRPC_PHARMACY_SERVER_URL), ServerCredentials.createInsecure(), () => {
-  server.start();
-});
-
-
+  server.start()
+})

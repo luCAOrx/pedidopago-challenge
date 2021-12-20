@@ -6,4 +6,4 @@ const config = {
   oneofs: true
 }
 
-export { config };
+export { config }

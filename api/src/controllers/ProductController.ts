@@ -1,8 +1,8 @@
-import { Request, Response } from "express";
+import { Request, Response } from 'express'
 
-import { productClient } from "../services/ProductService";
+import { productClient } from '../services/ProductService'
 
-export async function createProduct(request: Request, response: Response) {
+export async function createProduct (request: Request, response: Response) {
   const {
     nome,
     preco,
@@ -10,81 +10,83 @@ export async function createProduct(request: Request, response: Response) {
     disponibilidade,
     volume,
     outros
-  } = request.body;
+  } = request.body
 
-  const { key: thumbnail } = request.file as Express.MulterS3.File;
+  const { key: thumbnail } = request.file as Express.MulterS3.File
 
   const productResponse = await new Promise((resolve, reject) => {
-    productClient.createProduct({product: {
-      thumbnail,
-      nome,
-      preco,
-      ingredientes,
-      disponibilidade,
-      volume,
-      outros
-    }}, (error: any, data: any) => {
-      if (error) {
-        reject(error);
-      } else {
-        resolve(data);
+    productClient.createProduct({
+      product: {
+        thumbnail,
+        nome,
+        preco,
+        ingredientes,
+        disponibilidade,
+        volume,
+        outros
       }
-    });
-  });
+    }, (error: any, data: any) => {
+      if (error) {
+        reject(error)
+      } else {
+        resolve(data)
+      }
+    })
+  })
 
-  return response.status(201).json(productResponse);
+  return response.status(201).json(productResponse)
 };
 
-export async function cloneProduct(request: Request, response: Response) {
-  const { id } = request.params;
+export async function cloneProduct (request: Request, response: Response) {
+  const { id } = request.params
 
   const productResponse = await new Promise((resolve, reject) => {
     productClient.cloneProduct({ id }, (error: any, data: any) => {
       if (error) {
-        reject(error);
+        reject(error)
       } else {
-        resolve(data);
+        resolve(data)
       }
-    });
-  });
+    })
+  })
 
-  return response.status(201).json(productResponse);
+  return response.status(201).json(productResponse)
 };
 
-export async function getProductsByName(request: Request, response: Response) {
-  const { nome, page } = request.query;
+export async function getProductsByName (request: Request, response: Response) {
+  const { nome, page } = request.query
 
   const productResponse = await new Promise((resolve, reject) => {
     productClient.getProductsByName({ nome, page }, (error: any, data: any) => {
       if (error) {
-        reject(error);
+        reject(error)
       } else {
-        resolve(data);
+        resolve(data)
       }
-    });
-  });
+    })
+  })
 
-  return response.status(200).json(productResponse);
+  return response.status(200).json(productResponse)
 };
 
-export async function getAllProducts(request: Request, response: Response) {
-  const { page } = request.query;
+export async function getAllProducts (request: Request, response: Response) {
+  const { page } = request.query
 
   const productResponse = await new Promise((resolve, reject) => {
     productClient.getAllProducts({ page }, (error: any, data: any) => {
       if (error) {
-        reject(error);
+        reject(error)
       } else {
-        resolve(data);
+        resolve(data)
       }
-    });
-  });
+    })
+  })
 
-  return response.status(200).json(productResponse);
+  return response.status(200).json(productResponse)
 };
 
-export async function updateProductData(request: Request, response: Response) {
-  const { id } = request.params;
+export async function updateProductData (request: Request, response: Response) {
+  const { id } = request.params
 
   const {
     nome,
@@ -93,44 +95,46 @@ export async function updateProductData(request: Request, response: Response) {
     disponibilidade,
     volume,
     outros
-  } = request.body;
+  } = request.body
 
-  const { key: thumbnail } = request.file as Express.MulterS3.File;
+  const { key: thumbnail } = request.file as Express.MulterS3.File
 
   const productResponse = await new Promise((resolve, reject) => {
-    productClient.updateProductData({product: {
-      id,
-      thumbnail,
-      nome,
-      preco,
-      ingredientes,
-      disponibilidade,
-      volume,
-      outros
-    }}, (error: any, data: any) => {
-      if (error) {
-        reject(error);
-      } else {
-        resolve(data);
+    productClient.updateProductData({
+      product: {
+        id,
+        thumbnail,
+        nome,
+        preco,
+        ingredientes,
+        disponibilidade,
+        volume,
+        outros
       }
-    });
-  });
+    }, (error: any, data: any) => {
+      if (error) {
+        reject(error)
+      } else {
+        resolve(data)
+      }
+    })
+  })
 
-  return response.status(201).json(productResponse);
+  return response.status(201).json(productResponse)
 };
 
-export async function deleteProduct(request: Request, response: Response) {
-  const { id } = request.params;
+export async function deleteProduct (request: Request, response: Response) {
+  const { id } = request.params
 
   await new Promise((resolve, reject) => {
     productClient.deleteProduct({ id }, (error: any, data: any) => {
       if (error) {
-        return response.status(400).json({ error: error.details });
+        return response.status(400).json({ error: error.details })
       } else {
-        resolve(data);
+        resolve(data)
       }
-    });
-  });
-  
-  return response.status(204).send();
+    })
+  })
+
+  return response.status(204).send()
 };

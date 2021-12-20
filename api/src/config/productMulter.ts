@@ -1,22 +1,22 @@
-import aws from 'aws-sdk';
-import crypto from 'crypto';
-import { Request } from 'express';
-import multer, { FileFilterCallback } from 'multer';
-import multerS3 from 'multer-s3';
-import path from 'path';
+import aws from 'aws-sdk'
+import crypto from 'crypto'
+import { Request } from 'express'
+import multer, { FileFilterCallback } from 'multer'
+import multerS3 from 'multer-s3'
+import path from 'path'
 
-const twoMB = 2 * 1024 * 1024;
+const twoMB = 2 * 1024 * 1024
 
 const storageTypes = {
   local: multer.diskStorage({
     destination: path.resolve(__dirname, '..', '..', 'uploads', 'product'),
-    filename(request, file: Express.MulterS3.File, callback) {
-      const hash = crypto.randomBytes(6).toString('hex');
+    filename (request, file: Express.MulterS3.File, callback) {
+      const hash = crypto.randomBytes(6).toString('hex')
 
-      file.key = `${hash}-${file.originalname}`;
+      file.key = `${hash}-${file.originalname}`
 
-      callback(null, file.key);
-    },
+      callback(null, file.key)
+    }
   }),
   s3: multerS3({
     s3: new aws.S3({
@@ -30,35 +30,35 @@ const storageTypes = {
     contentType: multerS3.AUTO_CONTENT_TYPE,
     acl: 'public-read',
     key: (request, file: Express.MulterS3.File, callback) => {
-      const hash = crypto.randomBytes(6).toString('hex');
+      const hash = crypto.randomBytes(6).toString('hex')
 
-      const fileName = `${hash}-${file.originalname}`;
+      const fileName = `${hash}-${file.originalname}`
 
-      callback(null, fileName);
-    },
-  }),
-};
+      callback(null, fileName)
+    }
+  })
+}
 
 export const productMulterConfig = {
   destination: path.resolve(__dirname, '..', '..', 'uploads', 'product'),
   storage: process.env.STORAGE_TYPE === 'local' ? storageTypes.local : storageTypes.s3,
   limits: {
-    fileSize: twoMB,
+    fileSize: twoMB
   },
 
-  fileFilter(request: Request, file: Express.MulterS3.File, callback: FileFilterCallback) {
+  fileFilter (request: Request, file: Express.MulterS3.File, callback: FileFilterCallback) {
     const allowedMimes = [
       'image/jpeg',
       'image/pjpeg',
       'image/png',
-      'image/jpg',
-    ];
+      'image/jpg'
+    ]
 
     if (allowedMimes.includes(file.mimetype)) {
-      callback(null, true);
+      callback(null, true)
     } else {
-      callback(null, false);
-      callback(new Error('Tipo de arquivo inválido.'));
+      callback(null, false)
+      callback(new Error('Tipo de arquivo inválido.'))
     }
-  },
-};
+  }
+}
