@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  pharmacy_database:
+    image: mariadb
+    container_name: pharmacy_database
+    restart: always
+    ports:
+      - ${MARIADB_PORT}:3306
+    environment:
+      MARIADB_ROOT_USER: ${MARIADB_USER}
+      MARIADB_ROOT_PASSWORD: ${MARIADB_PASSWORD}
+      MARIADB_DATABASE: ${MARIADB_DATABASE}
+      MARIADB_ROOT_HOST: ${MARIADB_HOST}
+    networks:
+      - pedidopago
+
+  pharmacy_microservice:
+    image: node:latest
+    container_name: pharmacy_microservice
+    restart: always
+    env_file:
+     - .env
+    depends_on:
+      - pharmacy_database
+    ports:
+      - "${SERVER_PORT}:${SERVER_PORT}"
+    working_dir: /usr/app
+    volumes:
+      - .:/usr/app
+    command: yarn start
+    networks:
+      - pedidopago
+
+networks:
+  pedidopago:
+    name: pedidopago
+    driver: bridge
