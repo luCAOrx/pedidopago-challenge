@@ -28,7 +28,7 @@ services:
     working_dir: /usr/app
     volumes:
       - .:/usr/app
-    command: yarn start
+    command: yarn dev
     networks:
       - pedidopago
 
