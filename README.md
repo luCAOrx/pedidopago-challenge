@@ -13,10 +13,10 @@ O docker não está funcionando corretamente.
  
  Para executar o projeto em desenvolvimento, execute `yarn dev`.
  
- ## Consumindo a aplicação
- Você pode utilizar o insomnia, postman ou outro de sua preferência para isso.
+ ## Consumindo o microserviço
+ Para isso, você vai precisar de um cliente de requisições, você pode utilizar o insomnia, postman ou outro de sua preferência para isso.
  
- Aqui está o arquivo em json para você importar no seu cliente de requisições [insomnia enviroment collection](.github/).
+ Aqui está o arquivo em `.json` para você importar no seu cliente de requisições [insomnia enviroment collection](.github/).
 
  ## Visualizando os dados no banco de dados
  Entre no diretório microservices/pharmacy, microservices/products e execute `yarn prisma studio`.
