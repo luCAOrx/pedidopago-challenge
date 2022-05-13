@@ -4,9 +4,9 @@ import aws from 'aws-sdk'
 
 import multerS3 from 'multer-s3'
 
-import { promisify } from 'util'
-import fileSystem from 'fs'
-import path from 'path'
+import { unlink } from 'fs/promises'
+
+import { resolve } from 'path'
 
 import { productAmazonS3Config } from '../config/productAmazonS3'
 
@@ -47,10 +47,10 @@ export async function createProduct (call: any, callback: any) {
 
     return callback(null, { product })
   } catch (error) {
+    const filePath = resolve(__dirname, '..', '..', '..', '..', 'api', 'uploads', 'product', `${thumbnail}`)
+
     if (process.env.STORAGE_TYPE === 'local') {
-      promisify(fileSystem.unlink)(path.resolve(
-        __dirname, '..', '..', '..', '..', 'api', 'uploads', `product/${thumbnail}`
-      ))
+      await unlink(filePath)
     } else {
       s3.deleteObject({
         Bucket: String(process.env.AWS_PRODUCTS_BUCKET_NAME),
@@ -89,8 +89,6 @@ export async function cloneProduct (call: any, callback: any) {
 };
 
 export async function getProductsByName (call: any, callback: any) {
-  console.log(call.request)
-
   const { nome, page } = call.request
 
   try {
@@ -141,10 +139,10 @@ export async function updateProductData (call: any, callback: any) {
       select: { thumbnail: true }
     })
 
+    const filePath = resolve(__dirname, '..', '..', '..', '..', 'api', 'uploads', 'product', `${thumbnailInDataBase?.thumbnail}`)
+
     if (process.env.STORAGE_TYPE === 'local') {
-      promisify(fileSystem.unlink)(path.resolve(
-        __dirname, '..', '..', '..', '..', 'api', 'uploads', `product/${thumbnailInDataBase?.thumbnail}`
-      ))
+      await unlink(filePath)
     } else {
       s3.deleteObject({
         Bucket: String(process.env.AWS_PRODUCTS_BUCKET_NAME),
@@ -172,10 +170,10 @@ export async function updateProductData (call: any, callback: any) {
       select: { thumbnail: true }
     })
 
+    const filePath = resolve(__dirname, '..', '..', '..', '..', 'api', 'uploads', 'product', `${thumbnailInDataBase?.thumbnail}`)
+
     if (process.env.STORAGE_TYPE === 'local') {
-      promisify(fileSystem.unlink)(path.resolve(
-        __dirname, '..', '..', '..', '..', 'api', 'uploads', `product/${thumbnailInDataBase?.thumbnail}`
-      ))
+      await unlink(filePath)
     } else {
       s3.deleteObject({
         Bucket: String(process.env.AWS_PRODUCTS_BUCKET_NAME),
@@ -196,10 +194,11 @@ export async function deleteProduct (call: any, callback: any) {
       select: { thumbnail: true }
     })
 
+    const filePath = resolve(__dirname, '..', '..', '..', '..', 'api', 'uploads', 'product', `${thumbnailInDataBase?.thumbnail}`)
+
     if (process.env.STORAGE_TYPE === 'local') {
-      promisify(fileSystem.unlink)(path.resolve(
-        __dirname, '..', '..', '..', '..', 'api', 'uploads', `product/${thumbnailInDataBase?.thumbnail}`
-      ))
+      await unlink(filePath)
+      console.log('file deleted')
     } else {
       s3.deleteObject({
         Bucket: String(process.env.AWS_PRODUCTS_BUCKET_NAME),
