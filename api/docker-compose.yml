@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3.7"
 
 services:
   api:
@@ -6,9 +6,9 @@ services:
     container_name: api
     restart: always
     env_file:
-     - .env
+      - .env
     ports:
-      - "${SERVER_PORT}:${SERVER_PORT}"
+      - ${SERVER_PORT}:${SERVER_PORT}
     working_dir: /usr/app
     volumes:
       - .:/usr/app
