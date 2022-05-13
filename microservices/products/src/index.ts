@@ -40,6 +40,6 @@ server.addService(product.ProductService.service, {
   deleteProduct
 })
 
-server.bindAsync(String(process.env.GRPC_PRODUCTS_SERVER_URL), ServerCredentials.createInsecure(), () => {
+server.bindAsync(`${process.env.GRPC_PRODUCTS_SERVER_URL}`, ServerCredentials.createInsecure(), () => {
   server.start()
 })
