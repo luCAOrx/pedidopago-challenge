@@ -1,16 +1,21 @@
 include .env
 
-.PHONY: up
+.PHONY: up-api
 
-up:
+up-api:
 	docker-compose up -d
 
-.PHONY: down
+.PHONY: down-api
 
-down:
+down-api:
 	docker-compose down
 
-.PHONY: logs
+.PHONY: restart-api
 
-logs:
-	docker-compose logs -f
+restart-api:
+	docker-compose restart api
+
+.PHONY: logs-api
+
+logs-api:
+	docker-compose logs -f api
