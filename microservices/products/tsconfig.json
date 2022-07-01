@@ -6,7 +6,6 @@
     "allowJs": true,
     "outDir": "./dist", 
     "rootDirs": [
-      "./__tests__",
       "./src"
     ],
     "removeComments": true,        
