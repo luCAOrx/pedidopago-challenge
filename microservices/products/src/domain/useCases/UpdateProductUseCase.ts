@@ -3,6 +3,7 @@ import { CreateProductRequestDTO } from '../dtos/ProductDTO'
 import { Product } from '../entities/Product'
 import { AvailabilityValidation, IngredientsValidation, NameValidation, OthersValidation, PriceValidation, ThumbnailValidation, VolumeValidation } from '../entities/validations'
 import { ProductRepository } from '../repositories/ProductRepository'
+import { ProductDoesNotExistsError } from './errors/ProductDoesNotExistsError'
 
 type UpdateProductRequest = { productId: string, data: CreateProductRequestDTO }
 
@@ -13,7 +14,8 @@ AvailabilityValidation |
 VolumeValidation |
 PriceValidation |
 ThumbnailValidation |
-OthersValidation,
+OthersValidation |
+ProductDoesNotExistsError,
 Product
 >
 
@@ -24,12 +26,12 @@ export class UpdateProductUseCase {
     productId,
     data
   }: UpdateProductRequest): Promise<UpdateProductResponse> {
-    const findProductById = await this.productRepository.findProductById(
+    const product = await this.productRepository.findProductById(
       productId
     )
 
-    if (productId !== findProductById?.id) {
-      throw new Error('Product does not exists.')
+    if (productId !== product?.id) {
+      return left(new ProductDoesNotExistsError())
     }
 
     const productOrError = Product.create(data)
@@ -38,10 +40,10 @@ export class UpdateProductUseCase {
       return left(productOrError.value)
     }
 
-    findProductById.props = productOrError.value.props
+    product.props = productOrError.value.props
 
-    await this.productRepository.updateProduct(Object(findProductById.props))
+    await this.productRepository.updateProduct(Object(product.props))
 
-    return right(findProductById)
+    return right(product)
   }
 }
