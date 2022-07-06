@@ -26,12 +26,10 @@ describe('Clone product use case', () => {
   })
 
   it('should not be able to clone a product', async () => {
-    async function cloneProduct () {
-      await sut.execute({
-        productId: 'aad54b32-b870-4f93-b0e9-331eb1d1f311'
-      })
-    }
+    const cloneProduct = await sut.execute({
+      productId: 'aad54b32-b870-4f93-b0e9-331eb1d1f311'
+    })
 
-    expect(cloneProduct).rejects.toEqual(new Error('Product does not exists.'))
+    expect(cloneProduct.isLeft()).toBeTruthy()
   })
 })
