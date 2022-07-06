@@ -1,9 +1,10 @@
-import { Either, right } from '../../core/domain/logic/Either'
+import { Either, left, right } from '../../core/domain/logic/Either'
 import { ProductRepository } from '../repositories/ProductRepository'
+import { ProductDoesNotExistsError } from './errors/ProductDoesNotExistsError'
 
 type DeleteProductRequest = { productId: string }
 
-type DeleteProductResponse = Either<Error, null>
+type DeleteProductResponse = Either<ProductDoesNotExistsError, null>
 
 export class DeleteProductUseCase {
   constructor (private productRepository: ProductRepository) {}
@@ -16,7 +17,7 @@ export class DeleteProductUseCase {
     )
 
     if (productId !== product.id) {
-      throw new Error('Product does not exists.')
+      return left(new ProductDoesNotExistsError())
     }
 
     await this.productRepository.deleteProduct(product)
