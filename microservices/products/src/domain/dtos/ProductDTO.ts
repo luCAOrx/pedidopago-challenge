@@ -5,5 +5,5 @@ export interface CreateProductRequestDTO {
   ingredients: string;
   availability: boolean;
   volume: string;
-  others?: string | null;
+  others?: string;
 }
