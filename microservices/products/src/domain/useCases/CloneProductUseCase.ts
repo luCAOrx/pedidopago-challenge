@@ -1,9 +1,11 @@
+import { Either, left, right } from '../../core/domain/logic/Either'
 import { Product } from '../entities/Product'
 import { ProductRepository } from '../repositories/ProductRepository'
+import { ProductDoesNotExistsError } from './errors/ProductDoesNotExistsError'
 
 type CloneProductRequest = { productId: string }
 
-type CloneProductResponse = Product
+type CloneProductResponse = Either<ProductDoesNotExistsError, Product>
 
 export class CloneProductUseCase {
   constructor (private productRepository: ProductRepository) {}
@@ -16,7 +18,7 @@ export class CloneProductUseCase {
     )
 
     if (productId !== findProductById?.id) {
-      throw new Error('Product does not exists.')
+      return left(new ProductDoesNotExistsError())
     }
 
     const product = Product.create(findProductById.props)
@@ -25,6 +27,6 @@ export class CloneProductUseCase {
       Object(product.value)
     )
 
-    return clonedProduct
+    return right(clonedProduct)
   }
 }
