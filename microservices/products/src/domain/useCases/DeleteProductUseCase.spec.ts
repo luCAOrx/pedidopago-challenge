@@ -20,7 +20,7 @@ const createdProduct = Product.create({
 
 inMemoryProductRepository.createProducts(createdProduct)
 
-describe('Update product use case', () => {
+describe('Delete product use case', () => {
   it('should not be able to delete a product with wrong id', async () => {
     const deleteProduct = await sut.execute({
       productId: 'ddb9b22d-121a-49b0-a39d-d5885a3d0304'
