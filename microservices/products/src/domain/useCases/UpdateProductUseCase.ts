@@ -42,7 +42,7 @@ export class UpdateProductUseCase {
 
     product.props = productOrError.value.props
 
-    await this.productRepository.updateProduct(Object(product.props))
+    await this.productRepository.updateProduct(product)
 
     return right(product)
   }
