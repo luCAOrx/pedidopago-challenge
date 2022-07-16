@@ -12,12 +12,16 @@ export class PrismaProductRepository implements ProductRepository {
     return ProductMapper.toDomain(productCreated)
   }
 
-  async findProductById (productId: string): Promise<Product> {
+  async findProductById (productId: string): Promise<Product | null> {
     const productFound = await prisma.products.findUnique({
       where: { id: productId }
     })
 
-    return Object(productFound)
+    if (!productFound) {
+      return null
+    }
+
+    return ProductMapper.toDomain(productFound)
   }
 
   async cloneProduct (product: Product): Promise<Product> {
