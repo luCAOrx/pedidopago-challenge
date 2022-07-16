@@ -9,7 +9,7 @@ type GetProductInformationRequest = {
 
 type GetProductInformationResponse = Product[]
 
-export class GetProductInformation {
+export class GetProductInformationUseCase {
   constructor (private productRepository: ProductRepository) {}
 
   async execute ({
