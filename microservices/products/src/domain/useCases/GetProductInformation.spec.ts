@@ -1,10 +1,10 @@
 import { Product } from '../entities/Product'
 import { InMemoryProductRepository } from '../repositories/inMemory/InMemoryProductRepository'
-import { GetProductInformation } from './GetProductInformation'
+import { GetProductInformationUseCase } from './GetProductInformation'
 
 const inMemoryProductRepository = new InMemoryProductRepository()
 
-const sut = new GetProductInformation(inMemoryProductRepository)
+const sut = new GetProductInformationUseCase(inMemoryProductRepository)
 
 describe('Get products by name use case', () => {
   beforeAll(async () => {
