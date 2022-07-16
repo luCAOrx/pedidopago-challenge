@@ -8,7 +8,7 @@ export type GetProductInformationParams = {
 
 export interface ProductRepository {
   createProducts: (product: Product) => Promise<Product>;
-  findProductById: (productId: string) => Promise<Product>
+  findProductById: (productId: string) => Promise<Product | null>
   cloneProduct: (product: Product) => Promise<Product>;
   getProductInformation: (
     params: GetProductInformationParams
