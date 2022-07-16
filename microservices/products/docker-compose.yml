@@ -26,7 +26,7 @@ services:
     depends_on:
       - product_database
     ports:
-      - ${GRPC_SERVER_PORT}:${GRPC_SERVER_PORT}
+      - ${GRPC_PRODUCT_SERVER_PORT}:${GRPC_PRODUCT_SERVER_PORT}
     working_dir: /usr/app
     volumes:
       - .:/usr/app
