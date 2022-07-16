@@ -16,7 +16,7 @@ export class DeleteProductUseCase {
       productId
     )
 
-    if (productId !== product.id) {
+    if (productId !== product?.id) {
       return left(new ProductDoesNotExistsError())
     }
 
