@@ -11,13 +11,9 @@ export class ProductMapper {
       thumbnail: raw.thumbnail,
       volume: raw.volume,
       others: raw.others
-    }, raw.id)
+    }, raw.id).value
 
-    if (productOrError.isLeft()) {
-      throw new Error('The field value is invalid.')
-    }
-
-    return productOrError.value
+    return Object(productOrError)
   }
 
   static toPersistence (product: Product) {
