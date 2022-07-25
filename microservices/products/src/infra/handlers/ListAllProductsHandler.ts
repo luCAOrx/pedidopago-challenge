@@ -8,7 +8,7 @@ import {
 type ListAllProductsRequest = { page?: number, takePage?: number}
 
 export class ListAllProductsHandler {
-  async handler ({ page, takePage }: ListAllProductsRequest) {
+  async handle ({ page, takePage }: ListAllProductsRequest) {
     const prismaProductRepository = new PrismaProductRepository()
 
     const listAllProductsUseCase = new ListAllProductsUseCase(
