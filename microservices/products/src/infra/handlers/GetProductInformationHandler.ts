@@ -12,7 +12,7 @@ type GetProductInformationRequest = {
 }
 
 export class GetProductInformationHandler {
-  async handler ({
+  async handle ({
     query,
     page,
     takePage
