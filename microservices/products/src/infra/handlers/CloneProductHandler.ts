@@ -4,7 +4,7 @@ import { PrismaProductRepository } from '../repositories/prisma/PrismaProductRep
 type CloneProductRequest = { productId: string }
 
 export class CloneProductHandler {
-  async handler ({ productId }: CloneProductRequest) {
+  async handle ({ productId }: CloneProductRequest) {
     const prismaProductRepository = new PrismaProductRepository()
 
     const cloneProductUseCase = new CloneProductUseCase(
