@@ -1,8 +1,11 @@
 import { prisma } from '../prisma/client'
 import { PrismaProductRepository } from '../repositories/prisma/PrismaProductRepository'
 import { DeleteProductHandler } from './DeleteProductHandler'
+import { randomUUID } from 'node:crypto'
 
 const sut = new DeleteProductHandler()
+
+const id = randomUUID()
 
 describe('Delete product handler', () => {
   afterAll(async () => {
@@ -10,7 +13,7 @@ describe('Delete product handler', () => {
   })
 
   it('should not be able to delete a product with wrong id', async () => {
-    const response = await sut.handler({
+    const response = await sut.handle({
       productId: 'ddb9b22d-121a-49b0-a39d-d5885a3d0304'
     })
 
@@ -22,6 +25,7 @@ describe('Delete product handler', () => {
 
     const createdProduct = await prisma.products.create({
       data: {
+        id,
         name: 'Creatina',
         ingredients: 'Aminoácidos essências',
         availability: true,
@@ -32,7 +36,7 @@ describe('Delete product handler', () => {
       }
     })
 
-    const response = await sut.handler({
+    const response = await sut.handle({
       productId: createdProduct.id
     })
 
