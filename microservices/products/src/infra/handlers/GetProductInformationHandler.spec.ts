@@ -26,7 +26,7 @@ describe('Get products by name handler', () => {
   })
 
   it('should be able to search a product information', async () => {
-    const product = await sut.handler({ query: ['mina', 'clara'] })
+    const product = await sut.handle({ query: ['mina', 'clara'] })
 
     expect(product[0].props.name).toEqual('Albumina')
     expect(product[0].props.ingredients).toEqual('clara de ovos')
@@ -34,7 +34,7 @@ describe('Get products by name handler', () => {
 
   it('should be able to search a product information with case-insensitive',
     async () => {
-      const product = await sut.handler({ query: ['MINA', 'CLARA'] })
+      const product = await sut.handle({ query: ['MINA', 'CLARA'] })
 
       expect(product[0].props.name).toEqual('Albumina')
       expect(product[0].props.ingredients).toEqual('clara de ovos')
@@ -42,17 +42,17 @@ describe('Get products by name handler', () => {
   )
 
   it('should be able to search a product without a information', async () => {
-    const product = await sut.handler({ query: '' })
+    const product = await sut.handle({ query: '' })
 
     expect(product.length).toEqual(5)
   })
 
   it('should be able to paginate', async () => {
-    let product = await sut.handler({ takePage: 5 })
+    let product = await sut.handle({ takePage: 5 })
 
     expect(product.length).toEqual(5)
 
-    product = await sut.handler({ takePage: 5, page: 2 })
+    product = await sut.handle({ takePage: 5, page: 2 })
 
     expect(product.length).toEqual(5)
   })
