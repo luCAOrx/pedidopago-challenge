@@ -4,7 +4,7 @@ import { DeleteProductUseCase } from '../../domain/useCases/DeleteProductUseCase
 type DeleteProductRequest = { productId: string }
 
 export class DeleteProductHandler {
-  async handler ({ productId }: DeleteProductRequest) {
+  async handle ({ productId }: DeleteProductRequest) {
     const prismaProductRepository = new PrismaProductRepository()
 
     const deleteProductUseCase = new DeleteProductUseCase(
