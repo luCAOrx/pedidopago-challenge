@@ -1,7 +1,10 @@
 import { prisma } from '../prisma/client'
 import { CloneProductHandler } from './CloneProductHandler'
+import { randomUUID } from 'node:crypto'
 
 const sut = new CloneProductHandler()
+
+const id = randomUUID()
 
 describe('Clone product handler', () => {
   afterAll(async () => {
@@ -11,6 +14,7 @@ describe('Clone product handler', () => {
   it('should be able to clone a product', async () => {
     const createdProduct = await prisma.products.create({
       data: {
+        id,
         name: 'Creatina',
         ingredients: 'Aminoácidos essências',
         availability: true,
@@ -21,7 +25,7 @@ describe('Clone product handler', () => {
       }
     })
 
-    const productCloned = await sut.handler({
+    const productCloned = await sut.handle({
       productId: createdProduct.id
     })
 
@@ -29,7 +33,7 @@ describe('Clone product handler', () => {
   })
 
   it('should not be able to clone a product with id inexistent', async () => {
-    const cloneProduct = await sut.handler({
+    const cloneProduct = await sut.handle({
       productId: 'aad54b32-b870-4f93-b0e9-331eb1d1f311'
     })
 
