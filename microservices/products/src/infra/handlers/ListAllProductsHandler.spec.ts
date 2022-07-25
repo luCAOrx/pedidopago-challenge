@@ -26,17 +26,17 @@ describe('Get products by name handler', () => {
   })
 
   it('should be able to list all products', async () => {
-    const product = await sut.handler({ })
+    const product = await sut.handle({ })
 
     expect(product.length).toEqual(5)
   })
 
   it('should be able to paginate', async () => {
-    let product = await sut.handler({ takePage: 5 })
+    let product = await sut.handle({ takePage: 5 })
 
     expect(product.length).toEqual(5)
 
-    product = await sut.handler({ takePage: 5, page: 2 })
+    product = await sut.handle({ takePage: 5, page: 2 })
 
     expect(product.length).toEqual(5)
   })
