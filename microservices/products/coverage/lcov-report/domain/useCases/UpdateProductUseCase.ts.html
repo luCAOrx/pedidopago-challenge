@@ -25,14 +25,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>47/47</span>
+                <span class='fraction'>49/49</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>47/47</span>
+                <span class='fraction'>49/49</span>
             </div>
         
             
@@ -110,7 +110,9 @@
 <a name='L45'></a><a href='#L45'>45</a>
 <a name='L46'></a><a href='#L46'>46</a>
 <a name='L47'></a><a href='#L47'>47</a>
-<a name='L48'></a><a href='#L48'>48</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -133,35 +135,38 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Either, left, right } from '../../core/domain/logic/Either'
 import { CreateProductRequestDTO } from '../dtos/ProductDTO'
 import { Product } from '../entities/Product'
 import { AvailabilityValidation, IngredientsValidation, NameValidation, OthersValidation, PriceValidation, ThumbnailValidation, VolumeValidation } from '../entities/validations'
 import { ProductRepository } from '../repositories/ProductRepository'
+import { ProductDoesNotExistsError } from './errors/ProductDoesNotExistsError'
 &nbsp;
 type UpdateProductRequest = { productId: string, data: CreateProductRequestDTO }
 &nbsp;
@@ -172,7 +177,8 @@ AvailabilityValidation |
 VolumeValidation |
 PriceValidation |
 ThumbnailValidation |
-OthersValidation,
+OthersValidation |
+ProductDoesNotExistsError,
 Product
 &gt;
 &nbsp;
@@ -183,12 +189,12 @@ export class UpdateProductUseCase {
     productId,
     data
   }: UpdateProductRequest): Promise&lt;UpdateProductResponse&gt; {
-    const findProductById = await this.productRepository.findProductById(
+    const product = await this.productRepository.findProductById(
       productId
     )
 &nbsp;
-    if (productId !== findProductById?.id) {
-      throw new Error('Product does not exists.')
+    if (productId !== product?.id) {
+      return left(new ProductDoesNotExistsError())
     }
 &nbsp;
     const productOrError = Product.create(data)
@@ -197,11 +203,11 @@ export class UpdateProductUseCase {
       return left(productOrError.value)
     }
 &nbsp;
-    findProductById.props = productOrError.value.props
+    product.props = productOrError.value.props
 &nbsp;
-    await this.productRepository.updateProduct(Object(findProductById.props))
+    await this.productRepository.updateProduct(product)
 &nbsp;
-    return right(findProductById)
+    return right(product)
   }
 }
 &nbsp;</pre></td></tr></table></pre>
@@ -211,7 +217,7 @@ export class UpdateProductUseCase {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Fri Jul 01 2022 01:33:02 GMT-0300 (Horário Padrão de Brasília)
+                at Tue Jul 26 2022 21:26:03 GMT-0300 (Horário Padrão de Brasília)
             </div>
         <script src="../../prettify.js"></script>
         <script>

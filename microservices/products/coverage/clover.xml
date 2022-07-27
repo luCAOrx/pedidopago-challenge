@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1656649982266" clover="3.2.0">
-  <project timestamp="1656649982266" name="All files">
-    <metrics statements="651" coveredstatements="651" conditionals="124" coveredconditionals="124" methods="38" coveredmethods="38" elements="813" coveredelements="813" complexity="0" loc="651" ncloc="651" packages="6" files="18" classes="18"/>
+<coverage generated="1658881563232" clover="3.2.0">
+  <project timestamp="1658881563232" name="All files">
+    <metrics statements="951" coveredstatements="951" conditionals="147" coveredconditionals="147" methods="54" coveredmethods="54" elements="1152" coveredelements="1152" complexity="0" loc="951" ncloc="951" packages="11" files="28" classes="28"/>
     <package name="core.domain.entities">
-      <metrics statements="15" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <metrics statements="15" coveredstatements="15" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
       <file name="Entity.ts" path="/home/lucao/Documentos/workspace-javascript/pedidopago-monorepo/microservices/products/src/core/domain/entities/Entity.ts">
-        <metrics statements="15" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <metrics statements="15" coveredstatements="15" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -13,13 +13,13 @@
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="8" count="19" type="stmt"/>
-        <line num="9" count="19" type="stmt"/>
+        <line num="8" count="68" type="stmt"/>
+        <line num="9" count="68" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
         <line num="11" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="77" type="stmt"/>
-        <line num="13" count="77" type="stmt"/>
-        <line num="14" count="77" type="stmt"/>
+        <line num="12" count="209" type="stmt"/>
+        <line num="13" count="209" type="cond" truecount="1" falsecount="0"/>
+        <line num="14" count="209" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
       </file>
     </package>
@@ -31,12 +31,12 @@
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="5" count="48" type="stmt"/>
-        <line num="6" count="48" type="stmt"/>
+        <line num="5" count="58" type="stmt"/>
+        <line num="6" count="58" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="9" count="46" type="stmt"/>
-        <line num="10" count="46" type="stmt"/>
+        <line num="9" count="56" type="stmt"/>
+        <line num="10" count="56" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
         <line num="12" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="13" count="2" type="stmt"/>
@@ -47,27 +47,27 @@
         <line num="18" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
         <line num="20" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="21" count="63" type="stmt"/>
-        <line num="22" count="63" type="stmt"/>
+        <line num="21" count="238" type="stmt"/>
+        <line num="22" count="238" type="stmt"/>
         <line num="23" count="1" type="stmt"/>
         <line num="24" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="25" count="9" type="stmt"/>
-        <line num="26" count="9" type="stmt"/>
+        <line num="25" count="51" type="stmt"/>
+        <line num="26" count="51" type="stmt"/>
         <line num="27" count="1" type="stmt"/>
         <line num="28" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="29" count="8" type="stmt"/>
-        <line num="30" count="8" type="stmt"/>
+        <line num="29" count="12" type="stmt"/>
+        <line num="30" count="12" type="stmt"/>
         <line num="31" count="1" type="stmt"/>
         <line num="32" count="1" type="stmt"/>
         <line num="33" count="1" type="stmt"/>
         <line num="34" count="1" type="stmt"/>
         <line num="35" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="36" count="48" type="stmt"/>
-        <line num="37" count="48" type="stmt"/>
+        <line num="36" count="58" type="stmt"/>
+        <line num="37" count="58" type="stmt"/>
         <line num="38" count="1" type="stmt"/>
         <line num="39" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="40" count="63" type="stmt"/>
-        <line num="41" count="63" type="stmt"/>
+        <line num="40" count="238" type="stmt"/>
+        <line num="41" count="238" type="stmt"/>
       </file>
     </package>
     <package name="domain.entities">
@@ -98,65 +98,65 @@
         <line num="22" count="1" type="stmt"/>
         <line num="23" count="1" type="stmt"/>
         <line num="24" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="25" count="77" type="stmt"/>
-        <line num="26" count="77" type="stmt"/>
+        <line num="25" count="209" type="stmt"/>
+        <line num="26" count="209" type="stmt"/>
         <line num="27" count="1" type="stmt"/>
         <line num="28" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="29" count="77" type="stmt"/>
-        <line num="30" count="77" type="stmt"/>
-        <line num="31" count="77" type="stmt"/>
-        <line num="32" count="77" type="stmt"/>
-        <line num="33" count="77" type="stmt"/>
-        <line num="34" count="77" type="stmt"/>
-        <line num="35" count="77" type="stmt"/>
-        <line num="36" count="77" type="stmt"/>
-        <line num="37" count="77" type="stmt"/>
-        <line num="38" count="77" type="stmt"/>
-        <line num="39" count="77" type="stmt"/>
-        <line num="40" count="77" type="stmt"/>
-        <line num="41" count="77" type="stmt"/>
-        <line num="42" count="77" type="stmt"/>
-        <line num="43" count="77" type="stmt"/>
-        <line num="44" count="77" type="stmt"/>
-        <line num="45" count="77" type="stmt"/>
-        <line num="46" count="77" type="stmt"/>
-        <line num="47" count="77" type="stmt"/>
-        <line num="48" count="77" type="stmt"/>
-        <line num="49" count="77" type="stmt"/>
-        <line num="50" count="77" type="stmt"/>
-        <line num="51" count="77" type="stmt"/>
-        <line num="52" count="77" type="stmt"/>
-        <line num="53" count="77" type="stmt"/>
-        <line num="54" count="77" type="cond" truecount="2" falsecount="0"/>
-        <line num="55" count="6" type="stmt"/>
-        <line num="56" count="6" type="stmt"/>
-        <line num="57" count="71" type="cond" truecount="1" falsecount="0"/>
-        <line num="58" count="77" type="cond" truecount="1" falsecount="0"/>
+        <line num="29" count="209" type="stmt"/>
+        <line num="30" count="209" type="stmt"/>
+        <line num="31" count="209" type="stmt"/>
+        <line num="32" count="209" type="stmt"/>
+        <line num="33" count="209" type="stmt"/>
+        <line num="34" count="209" type="stmt"/>
+        <line num="35" count="209" type="stmt"/>
+        <line num="36" count="209" type="stmt"/>
+        <line num="37" count="209" type="stmt"/>
+        <line num="38" count="209" type="stmt"/>
+        <line num="39" count="209" type="stmt"/>
+        <line num="40" count="209" type="stmt"/>
+        <line num="41" count="209" type="stmt"/>
+        <line num="42" count="209" type="stmt"/>
+        <line num="43" count="209" type="stmt"/>
+        <line num="44" count="209" type="stmt"/>
+        <line num="45" count="209" type="stmt"/>
+        <line num="46" count="209" type="stmt"/>
+        <line num="47" count="209" type="stmt"/>
+        <line num="48" count="209" type="stmt"/>
+        <line num="49" count="209" type="stmt"/>
+        <line num="50" count="209" type="stmt"/>
+        <line num="51" count="209" type="stmt"/>
+        <line num="52" count="209" type="stmt"/>
+        <line num="53" count="209" type="stmt"/>
+        <line num="54" count="209" type="cond" truecount="2" falsecount="0"/>
+        <line num="55" count="8" type="stmt"/>
+        <line num="56" count="8" type="stmt"/>
+        <line num="57" count="201" type="cond" truecount="1" falsecount="0"/>
+        <line num="58" count="209" type="cond" truecount="1" falsecount="0"/>
         <line num="59" count="3" type="stmt"/>
         <line num="60" count="3" type="stmt"/>
-        <line num="61" count="68" type="cond" truecount="1" falsecount="0"/>
-        <line num="62" count="77" type="cond" truecount="2" falsecount="0"/>
+        <line num="61" count="198" type="cond" truecount="1" falsecount="0"/>
+        <line num="62" count="209" type="cond" truecount="2" falsecount="0"/>
         <line num="63" count="1" type="stmt"/>
         <line num="64" count="1" type="stmt"/>
-        <line num="65" count="67" type="cond" truecount="1" falsecount="0"/>
-        <line num="66" count="77" type="cond" truecount="1" falsecount="0"/>
+        <line num="65" count="197" type="cond" truecount="1" falsecount="0"/>
+        <line num="66" count="209" type="cond" truecount="1" falsecount="0"/>
         <line num="67" count="5" type="stmt"/>
         <line num="68" count="5" type="stmt"/>
-        <line num="69" count="62" type="cond" truecount="1" falsecount="0"/>
-        <line num="70" count="77" type="cond" truecount="1" falsecount="0"/>
+        <line num="69" count="192" type="cond" truecount="1" falsecount="0"/>
+        <line num="70" count="209" type="cond" truecount="1" falsecount="0"/>
         <line num="71" count="3" type="stmt"/>
         <line num="72" count="3" type="stmt"/>
-        <line num="73" count="59" type="cond" truecount="1" falsecount="0"/>
-        <line num="74" count="77" type="cond" truecount="1" falsecount="0"/>
+        <line num="73" count="189" type="cond" truecount="1" falsecount="0"/>
+        <line num="74" count="209" type="cond" truecount="1" falsecount="0"/>
         <line num="75" count="4" type="stmt"/>
         <line num="76" count="4" type="stmt"/>
-        <line num="77" count="55" type="cond" truecount="1" falsecount="0"/>
-        <line num="78" count="77" type="cond" truecount="1" falsecount="0"/>
+        <line num="77" count="185" type="cond" truecount="1" falsecount="0"/>
+        <line num="78" count="209" type="cond" truecount="1" falsecount="0"/>
         <line num="79" count="2" type="stmt"/>
         <line num="80" count="2" type="stmt"/>
-        <line num="81" count="53" type="cond" truecount="1" falsecount="0"/>
-        <line num="82" count="53" type="stmt"/>
-        <line num="83" count="53" type="stmt"/>
+        <line num="81" count="183" type="cond" truecount="1" falsecount="0"/>
+        <line num="82" count="183" type="stmt"/>
+        <line num="83" count="183" type="stmt"/>
         <line num="84" count="1" type="stmt"/>
       </file>
     </package>
@@ -168,15 +168,15 @@
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="5" count="77" type="cond" truecount="2" falsecount="0"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="10" count="3" type="stmt"/>
-        <line num="11" count="74" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="74" type="stmt"/>
-        <line num="13" count="74" type="stmt"/>
+        <line num="5" count="209" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="204" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="204" type="stmt"/>
+        <line num="13" count="204" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
       </file>
       <file name="IngredientsValidation.ts" path="/home/lucao/Documentos/workspace-javascript/pedidopago-monorepo/microservices/products/src/domain/entities/validations/IngredientsValidation.ts">
@@ -185,29 +185,29 @@
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="5" count="77" type="cond" truecount="2" falsecount="0"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="10" count="3" type="stmt"/>
-        <line num="11" count="74" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="77" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="209" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="204" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="209" type="cond" truecount="1" falsecount="0"/>
         <line num="13" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
-        <line num="18" count="73" type="cond" truecount="1" falsecount="0"/>
-        <line num="19" count="77" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="203" type="cond" truecount="1" falsecount="0"/>
+        <line num="19" count="209" type="cond" truecount="2" falsecount="0"/>
         <line num="20" count="1" type="stmt"/>
         <line num="21" count="1" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
         <line num="23" count="1" type="stmt"/>
         <line num="24" count="1" type="stmt"/>
-        <line num="25" count="72" type="cond" truecount="1" falsecount="0"/>
-        <line num="26" count="72" type="stmt"/>
-        <line num="27" count="72" type="stmt"/>
+        <line num="25" count="202" type="cond" truecount="1" falsecount="0"/>
+        <line num="26" count="202" type="stmt"/>
+        <line num="27" count="202" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
       </file>
       <file name="NameValidation.ts" path="/home/lucao/Documentos/workspace-javascript/pedidopago-monorepo/microservices/products/src/domain/entities/validations/NameValidation.ts">
@@ -216,38 +216,38 @@
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="5" count="77" type="stmt"/>
-        <line num="6" count="77" type="stmt"/>
-        <line num="7" count="77" type="cond" truecount="2" falsecount="0"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="10" count="3" type="stmt"/>
-        <line num="11" count="3" type="stmt"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="13" count="74" type="cond" truecount="1" falsecount="0"/>
-        <line num="14" count="77" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="209" type="stmt"/>
+        <line num="6" count="209" type="stmt"/>
+        <line num="7" count="209" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="13" count="204" type="cond" truecount="1" falsecount="0"/>
+        <line num="14" count="209" type="cond" truecount="1" falsecount="0"/>
         <line num="15" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
-        <line num="20" count="73" type="cond" truecount="1" falsecount="0"/>
-        <line num="21" count="77" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="203" type="cond" truecount="1" falsecount="0"/>
+        <line num="21" count="209" type="cond" truecount="1" falsecount="0"/>
         <line num="22" count="1" type="stmt"/>
         <line num="23" count="1" type="stmt"/>
         <line num="24" count="1" type="stmt"/>
         <line num="25" count="1" type="stmt"/>
         <line num="26" count="1" type="stmt"/>
-        <line num="27" count="72" type="cond" truecount="1" falsecount="0"/>
-        <line num="28" count="77" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="202" type="cond" truecount="1" falsecount="0"/>
+        <line num="28" count="209" type="cond" truecount="2" falsecount="0"/>
         <line num="29" count="1" type="stmt"/>
         <line num="30" count="1" type="stmt"/>
         <line num="31" count="1" type="stmt"/>
         <line num="32" count="1" type="stmt"/>
         <line num="33" count="1" type="stmt"/>
-        <line num="34" count="71" type="cond" truecount="1" falsecount="0"/>
-        <line num="35" count="71" type="stmt"/>
-        <line num="36" count="71" type="stmt"/>
+        <line num="34" count="201" type="cond" truecount="1" falsecount="0"/>
+        <line num="35" count="201" type="stmt"/>
+        <line num="36" count="201" type="stmt"/>
         <line num="37" count="1" type="stmt"/>
       </file>
       <file name="OthersValidation.ts" path="/home/lucao/Documentos/workspace-javascript/pedidopago-monorepo/microservices/products/src/domain/entities/validations/OthersValidation.ts">
@@ -256,22 +256,22 @@
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="5" count="77" type="cond" truecount="2" falsecount="0"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="10" count="3" type="stmt"/>
-        <line num="11" count="74" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="77" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="209" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="204" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="209" type="cond" truecount="2" falsecount="0"/>
         <line num="13" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
-        <line num="18" count="73" type="cond" truecount="1" falsecount="0"/>
-        <line num="19" count="73" type="stmt"/>
-        <line num="20" count="73" type="stmt"/>
+        <line num="18" count="203" type="cond" truecount="1" falsecount="0"/>
+        <line num="19" count="203" type="stmt"/>
+        <line num="20" count="203" type="stmt"/>
         <line num="21" count="1" type="stmt"/>
       </file>
       <file name="PriceValidation.ts" path="/home/lucao/Documentos/workspace-javascript/pedidopago-monorepo/microservices/products/src/domain/entities/validations/PriceValidation.ts">
@@ -280,29 +280,29 @@
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="5" count="77" type="cond" truecount="2" falsecount="0"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="10" count="3" type="stmt"/>
-        <line num="11" count="74" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="77" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="209" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="204" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="209" type="cond" truecount="1" falsecount="0"/>
         <line num="13" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
-        <line num="18" count="73" type="cond" truecount="1" falsecount="0"/>
-        <line num="19" count="77" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="203" type="cond" truecount="1" falsecount="0"/>
+        <line num="19" count="209" type="cond" truecount="2" falsecount="0"/>
         <line num="20" count="1" type="stmt"/>
         <line num="21" count="1" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
         <line num="23" count="1" type="stmt"/>
         <line num="24" count="1" type="stmt"/>
-        <line num="25" count="72" type="cond" truecount="1" falsecount="0"/>
-        <line num="26" count="72" type="stmt"/>
-        <line num="27" count="72" type="stmt"/>
+        <line num="25" count="202" type="cond" truecount="1" falsecount="0"/>
+        <line num="26" count="202" type="stmt"/>
+        <line num="27" count="202" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
       </file>
       <file name="ThumbnailValidation.ts" path="/home/lucao/Documentos/workspace-javascript/pedidopago-monorepo/microservices/products/src/domain/entities/validations/ThumbnailValidation.ts">
@@ -311,38 +311,38 @@
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="5" count="77" type="stmt"/>
-        <line num="6" count="77" type="stmt"/>
-        <line num="7" count="77" type="cond" truecount="2" falsecount="0"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="10" count="3" type="stmt"/>
-        <line num="11" count="3" type="stmt"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="13" count="74" type="cond" truecount="1" falsecount="0"/>
-        <line num="14" count="77" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="209" type="stmt"/>
+        <line num="6" count="209" type="stmt"/>
+        <line num="7" count="209" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="13" count="204" type="cond" truecount="1" falsecount="0"/>
+        <line num="14" count="209" type="cond" truecount="1" falsecount="0"/>
         <line num="15" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
-        <line num="20" count="73" type="cond" truecount="1" falsecount="0"/>
-        <line num="21" count="77" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="203" type="cond" truecount="1" falsecount="0"/>
+        <line num="21" count="209" type="cond" truecount="1" falsecount="0"/>
         <line num="22" count="1" type="stmt"/>
         <line num="23" count="1" type="stmt"/>
         <line num="24" count="1" type="stmt"/>
         <line num="25" count="1" type="stmt"/>
         <line num="26" count="1" type="stmt"/>
-        <line num="27" count="72" type="cond" truecount="1" falsecount="0"/>
-        <line num="28" count="77" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="202" type="cond" truecount="1" falsecount="0"/>
+        <line num="28" count="209" type="cond" truecount="2" falsecount="0"/>
         <line num="29" count="1" type="stmt"/>
         <line num="30" count="1" type="stmt"/>
         <line num="31" count="1" type="stmt"/>
         <line num="32" count="1" type="stmt"/>
         <line num="33" count="1" type="stmt"/>
-        <line num="34" count="71" type="cond" truecount="1" falsecount="0"/>
-        <line num="35" count="71" type="stmt"/>
-        <line num="36" count="71" type="stmt"/>
+        <line num="34" count="201" type="cond" truecount="1" falsecount="0"/>
+        <line num="35" count="201" type="stmt"/>
+        <line num="36" count="201" type="stmt"/>
         <line num="37" count="1" type="stmt"/>
       </file>
       <file name="VolumeValidation.ts" path="/home/lucao/Documentos/workspace-javascript/pedidopago-monorepo/microservices/products/src/domain/entities/validations/VolumeValidation.ts">
@@ -351,43 +351,43 @@
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="5" count="77" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="209" type="cond" truecount="1" falsecount="0"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
-        <line num="11" count="76" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="76" type="cond" truecount="1" falsecount="0"/>
-        <line num="13" count="3" type="stmt"/>
-        <line num="14" count="3" type="stmt"/>
-        <line num="15" count="3" type="stmt"/>
-        <line num="16" count="3" type="stmt"/>
-        <line num="17" count="3" type="stmt"/>
-        <line num="18" count="73" type="cond" truecount="1" falsecount="0"/>
-        <line num="19" count="77" type="cond" truecount="1" falsecount="0"/>
+        <line num="11" count="208" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="208" type="cond" truecount="1" falsecount="0"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="18" count="203" type="cond" truecount="1" falsecount="0"/>
+        <line num="19" count="209" type="cond" truecount="1" falsecount="0"/>
         <line num="20" count="1" type="stmt"/>
         <line num="21" count="1" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
         <line num="23" count="1" type="stmt"/>
         <line num="24" count="1" type="stmt"/>
-        <line num="25" count="72" type="cond" truecount="1" falsecount="0"/>
-        <line num="26" count="77" type="cond" truecount="1" falsecount="0"/>
+        <line num="25" count="202" type="cond" truecount="1" falsecount="0"/>
+        <line num="26" count="209" type="cond" truecount="1" falsecount="0"/>
         <line num="27" count="1" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
         <line num="29" count="1" type="stmt"/>
         <line num="30" count="1" type="stmt"/>
         <line num="31" count="1" type="stmt"/>
-        <line num="32" count="71" type="cond" truecount="1" falsecount="0"/>
-        <line num="33" count="77" type="cond" truecount="2" falsecount="0"/>
+        <line num="32" count="201" type="cond" truecount="1" falsecount="0"/>
+        <line num="33" count="209" type="cond" truecount="2" falsecount="0"/>
         <line num="34" count="1" type="stmt"/>
         <line num="35" count="1" type="stmt"/>
         <line num="36" count="1" type="stmt"/>
         <line num="37" count="1" type="stmt"/>
         <line num="38" count="1" type="stmt"/>
-        <line num="39" count="70" type="cond" truecount="1" falsecount="0"/>
-        <line num="40" count="70" type="stmt"/>
-        <line num="41" count="70" type="stmt"/>
+        <line num="39" count="200" type="cond" truecount="1" falsecount="0"/>
+        <line num="40" count="200" type="stmt"/>
+        <line num="41" count="200" type="stmt"/>
         <line num="42" count="1" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/lucao/Documentos/workspace-javascript/pedidopago-monorepo/microservices/products/src/domain/entities/validations/index.ts">
@@ -508,9 +508,9 @@
       </file>
     </package>
     <package name="domain.useCases">
-      <metrics statements="197" coveredstatements="197" conditionals="20" coveredconditionals="20" methods="12" coveredmethods="12"/>
+      <metrics statements="202" coveredstatements="202" conditionals="23" coveredconditionals="23" methods="12" coveredmethods="12"/>
       <file name="CloneProductUseCase.ts" path="/home/lucao/Documentos/workspace-javascript/pedidopago-monorepo/microservices/products/src/domain/useCases/CloneProductUseCase.ts">
-        <metrics statements="30" coveredstatements="30" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <metrics statements="32" coveredstatements="32" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -519,28 +519,30 @@
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="9" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
         <line num="11" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="2" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="15" count="2" type="stmt"/>
-        <line num="16" count="2" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
-        <line num="18" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="20" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
       </file>
       <file name="CreateProductUseCase.ts" path="/home/lucao/Documentos/workspace-javascript/pedidopago-monorepo/microservices/products/src/domain/useCases/CreateProductUseCase.ts">
         <metrics statements="44" coveredstatements="44" conditionals="5" coveredconditionals="5" methods="2" coveredmethods="2"/>
@@ -575,22 +577,22 @@
         <line num="29" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="30" count="1" type="stmt"/>
         <line num="31" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="32" count="31" type="stmt"/>
-        <line num="33" count="31" type="stmt"/>
-        <line num="34" count="31" type="cond" truecount="2" falsecount="0"/>
-        <line num="35" count="23" type="stmt"/>
-        <line num="36" count="23" type="stmt"/>
-        <line num="37" count="8" type="cond" truecount="1" falsecount="0"/>
-        <line num="38" count="8" type="stmt"/>
-        <line num="39" count="8" type="stmt"/>
-        <line num="40" count="8" type="stmt"/>
-        <line num="41" count="8" type="stmt"/>
-        <line num="42" count="8" type="stmt"/>
-        <line num="43" count="8" type="stmt"/>
+        <line num="32" count="73" type="stmt"/>
+        <line num="33" count="73" type="stmt"/>
+        <line num="34" count="73" type="cond" truecount="2" falsecount="0"/>
+        <line num="35" count="24" type="stmt"/>
+        <line num="36" count="24" type="stmt"/>
+        <line num="37" count="49" type="cond" truecount="1" falsecount="0"/>
+        <line num="38" count="49" type="stmt"/>
+        <line num="39" count="49" type="stmt"/>
+        <line num="40" count="49" type="stmt"/>
+        <line num="41" count="49" type="stmt"/>
+        <line num="42" count="49" type="stmt"/>
+        <line num="43" count="49" type="stmt"/>
         <line num="44" count="1" type="stmt"/>
       </file>
       <file name="DeleteProductUseCase.ts" path="/home/lucao/Documentos/workspace-javascript/pedidopago-monorepo/microservices/products/src/domain/useCases/DeleteProductUseCase.ts">
-        <metrics statements="26" coveredstatements="26" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <metrics statements="27" coveredstatements="27" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -599,24 +601,25 @@
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="2" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="15" count="2" type="stmt"/>
-        <line num="16" count="2" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
-        <line num="18" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="19" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
       </file>
       <file name="GetProductInformation.ts" path="/home/lucao/Documentos/workspace-javascript/pedidopago-monorepo/microservices/products/src/domain/useCases/GetProductInformation.ts">
         <metrics statements="28" coveredstatements="28" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
@@ -635,18 +638,18 @@
         <line num="13" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="14" count="1" type="stmt"/>
         <line num="15" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="16" count="5" type="stmt"/>
-        <line num="17" count="5" type="stmt"/>
-        <line num="18" count="5" type="stmt"/>
-        <line num="19" count="5" type="stmt"/>
-        <line num="20" count="5" type="stmt"/>
-        <line num="21" count="5" type="stmt"/>
-        <line num="22" count="5" type="stmt"/>
-        <line num="23" count="5" type="stmt"/>
-        <line num="24" count="5" type="stmt"/>
-        <line num="25" count="5" type="stmt"/>
-        <line num="26" count="5" type="stmt"/>
-        <line num="27" count="5" type="stmt"/>
+        <line num="16" count="10" type="stmt"/>
+        <line num="17" count="10" type="stmt"/>
+        <line num="18" count="10" type="stmt"/>
+        <line num="19" count="10" type="stmt"/>
+        <line num="20" count="10" type="stmt"/>
+        <line num="21" count="10" type="stmt"/>
+        <line num="22" count="10" type="stmt"/>
+        <line num="23" count="10" type="stmt"/>
+        <line num="24" count="10" type="stmt"/>
+        <line num="25" count="10" type="stmt"/>
+        <line num="26" count="10" type="stmt"/>
+        <line num="27" count="10" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
       </file>
       <file name="ListAllProductsUseCase.ts" path="/home/lucao/Documentos/workspace-javascript/pedidopago-monorepo/microservices/products/src/domain/useCases/ListAllProductsUseCase.ts">
@@ -662,20 +665,20 @@
         <line num="9" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="10" count="1" type="stmt"/>
         <line num="11" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="13" count="3" type="stmt"/>
-        <line num="14" count="3" type="stmt"/>
-        <line num="15" count="3" type="stmt"/>
-        <line num="16" count="3" type="stmt"/>
-        <line num="17" count="3" type="stmt"/>
-        <line num="18" count="3" type="stmt"/>
-        <line num="19" count="3" type="stmt"/>
-        <line num="20" count="3" type="stmt"/>
-        <line num="21" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="13" count="6" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
+        <line num="17" count="6" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="19" count="6" type="stmt"/>
+        <line num="20" count="6" type="stmt"/>
+        <line num="21" count="6" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
       </file>
       <file name="UpdateProductUseCase.ts" path="/home/lucao/Documentos/workspace-javascript/pedidopago-monorepo/microservices/products/src/domain/useCases/UpdateProductUseCase.ts">
-        <metrics statements="47" coveredstatements="47" conditionals="5" coveredconditionals="5" methods="2" coveredmethods="2"/>
+        <metrics statements="49" coveredstatements="49" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -696,33 +699,375 @@
         <line num="18" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
-        <line num="21" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="21" count="1" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
         <line num="23" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="26" count="6" type="stmt"/>
+        <line num="27" count="6" type="stmt"/>
+        <line num="28" count="6" type="stmt"/>
+        <line num="29" count="6" type="stmt"/>
+        <line num="30" count="6" type="stmt"/>
+        <line num="31" count="6" type="stmt"/>
+        <line num="32" count="6" type="stmt"/>
+        <line num="33" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="36" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="37" count="4" type="stmt"/>
+        <line num="38" count="4" type="stmt"/>
+        <line num="39" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
+        <line num="44" count="2" type="stmt"/>
+        <line num="45" count="2" type="stmt"/>
+        <line num="46" count="2" type="stmt"/>
+        <line num="47" count="2" type="stmt"/>
+        <line num="48" count="2" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="domain.useCases.errors">
+      <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="ProductDoesNotExistsError.ts" path="/home/lucao/Documentos/workspace-javascript/pedidopago-monorepo/microservices/products/src/domain/useCases/errors/ProductDoesNotExistsError.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="infra.handlers">
+      <metrics statements="155" coveredstatements="155" conditionals="6" coveredconditionals="6" methods="6" coveredmethods="6"/>
+      <file name="CloneProductHandler.ts" path="/home/lucao/Documentos/workspace-javascript/pedidopago-monorepo/microservices/products/src/infra/handlers/CloneProductHandler.ts">
+        <metrics statements="18" coveredstatements="18" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+      </file>
+      <file name="CreateProductHandler.ts" path="/home/lucao/Documentos/workspace-javascript/pedidopago-monorepo/microservices/products/src/infra/handlers/CreateProductHandler.ts">
+        <metrics statements="41" coveredstatements="41" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="13" count="42" type="stmt"/>
+        <line num="14" count="42" type="stmt"/>
+        <line num="15" count="42" type="stmt"/>
+        <line num="16" count="42" type="stmt"/>
+        <line num="17" count="42" type="stmt"/>
+        <line num="18" count="42" type="stmt"/>
+        <line num="19" count="42" type="stmt"/>
+        <line num="20" count="42" type="stmt"/>
+        <line num="21" count="42" type="stmt"/>
+        <line num="22" count="42" type="stmt"/>
+        <line num="23" count="42" type="stmt"/>
+        <line num="24" count="42" type="stmt"/>
+        <line num="25" count="42" type="stmt"/>
+        <line num="26" count="42" type="stmt"/>
+        <line num="27" count="42" type="stmt"/>
+        <line num="28" count="42" type="stmt"/>
+        <line num="29" count="42" type="stmt"/>
+        <line num="30" count="42" type="stmt"/>
+        <line num="31" count="42" type="stmt"/>
+        <line num="32" count="42" type="stmt"/>
+        <line num="33" count="42" type="stmt"/>
+        <line num="34" count="42" type="stmt"/>
+        <line num="35" count="42" type="stmt"/>
+        <line num="36" count="42" type="stmt"/>
+        <line num="37" count="42" type="stmt"/>
+        <line num="38" count="42" type="stmt"/>
+        <line num="39" count="42" type="stmt"/>
+        <line num="40" count="42" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+      </file>
+      <file name="DeleteProductHandler.ts" path="/home/lucao/Documentos/workspace-javascript/pedidopago-monorepo/microservices/products/src/infra/handlers/DeleteProductHandler.ts">
+        <metrics statements="18" coveredstatements="18" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+      </file>
+      <file name="GetProductInformationHandler.ts" path="/home/lucao/Documentos/workspace-javascript/pedidopago-monorepo/microservices/products/src/infra/handlers/GetProductInformationHandler.ts">
+        <metrics statements="34" coveredstatements="34" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="23" count="5" type="stmt"/>
+        <line num="24" count="5" type="stmt"/>
+        <line num="25" count="5" type="stmt"/>
+        <line num="26" count="5" type="stmt"/>
+        <line num="27" count="5" type="stmt"/>
+        <line num="28" count="5" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="30" count="5" type="stmt"/>
+        <line num="31" count="5" type="stmt"/>
+        <line num="32" count="5" type="stmt"/>
+        <line num="33" count="5" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+      </file>
+      <file name="ListAllProductsHandler.ts" path="/home/lucao/Documentos/workspace-javascript/pedidopago-monorepo/microservices/products/src/infra/handlers/ListAllProductsHandler.ts">
+        <metrics statements="25" coveredstatements="25" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
         <line num="24" count="3" type="stmt"/>
-        <line num="25" count="3" type="stmt"/>
-        <line num="26" count="3" type="stmt"/>
-        <line num="27" count="3" type="stmt"/>
-        <line num="28" count="3" type="stmt"/>
-        <line num="29" count="3" type="stmt"/>
-        <line num="30" count="3" type="stmt"/>
-        <line num="31" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="25" count="1" type="stmt"/>
+      </file>
+      <file name="UpdateProductHandler.ts" path="/home/lucao/Documentos/workspace-javascript/pedidopago-monorepo/microservices/products/src/infra/handlers/UpdateProductHandler.ts">
+        <metrics statements="19" coveredstatements="19" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="infra.mappers">
+      <metrics statements="31" coveredstatements="31" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <file name="ProductMapper.ts" path="/home/lucao/Documentos/workspace-javascript/pedidopago-monorepo/microservices/products/src/infra/mappers/ProductMapper.ts">
+        <metrics statements="31" coveredstatements="31" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="87" type="stmt"/>
+        <line num="7" count="87" type="stmt"/>
+        <line num="8" count="87" type="stmt"/>
+        <line num="9" count="87" type="stmt"/>
+        <line num="10" count="87" type="stmt"/>
+        <line num="11" count="87" type="stmt"/>
+        <line num="12" count="87" type="stmt"/>
+        <line num="13" count="87" type="stmt"/>
+        <line num="14" count="87" type="stmt"/>
+        <line num="15" count="87" type="stmt"/>
+        <line num="16" count="87" type="stmt"/>
+        <line num="17" count="87" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="43" type="stmt"/>
+        <line num="21" count="43" type="stmt"/>
+        <line num="22" count="43" type="stmt"/>
+        <line num="23" count="43" type="stmt"/>
+        <line num="24" count="43" type="stmt"/>
+        <line num="25" count="43" type="stmt"/>
+        <line num="26" count="43" type="stmt"/>
+        <line num="27" count="43" type="stmt"/>
+        <line num="28" count="43" type="stmt"/>
+        <line num="29" count="43" type="stmt"/>
+        <line num="30" count="43" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="infra.prisma">
+      <metrics statements="19" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="client.ts" path="/home/lucao/Documentos/workspace-javascript/pedidopago-monorepo/microservices/products/src/infra/prisma/client.ts">
+        <metrics statements="19" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="infra.repositories.prisma">
+      <metrics statements="82" coveredstatements="82" conditionals="10" coveredconditionals="10" methods="7" coveredmethods="7"/>
+      <file name="PrismaProductRepository.ts" path="/home/lucao/Documentos/workspace-javascript/pedidopago-monorepo/microservices/products/src/infra/repositories/prisma/PrismaProductRepository.ts">
+        <metrics statements="82" coveredstatements="82" conditionals="10" coveredconditionals="10" methods="7" coveredmethods="7"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="8" count="41" type="stmt"/>
+        <line num="9" count="41" type="stmt"/>
+        <line num="10" count="41" type="stmt"/>
+        <line num="11" count="41" type="stmt"/>
+        <line num="12" count="41" type="stmt"/>
+        <line num="13" count="41" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="16" count="8" type="stmt"/>
+        <line num="17" count="8" type="stmt"/>
+        <line num="18" count="8" type="stmt"/>
+        <line num="19" count="8" type="stmt"/>
+        <line num="20" count="8" type="cond" truecount="1" falsecount="0"/>
+        <line num="21" count="4" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
+        <line num="25" count="4" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
         <line num="32" count="1" type="stmt"/>
         <line num="33" count="1" type="stmt"/>
-        <line num="34" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="35" count="2" type="stmt"/>
-        <line num="36" count="2" type="stmt"/>
-        <line num="37" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="38" count="1" type="stmt"/>
-        <line num="39" count="1" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
-        <line num="41" count="1" type="stmt"/>
-        <line num="42" count="1" type="stmt"/>
-        <line num="43" count="1" type="stmt"/>
-        <line num="44" count="1" type="stmt"/>
-        <line num="45" count="1" type="stmt"/>
-        <line num="46" count="1" type="stmt"/>
-        <line num="47" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="36" count="5" type="stmt"/>
+        <line num="37" count="5" type="stmt"/>
+        <line num="38" count="5" type="stmt"/>
+        <line num="39" count="5" type="stmt"/>
+        <line num="40" count="5" type="stmt"/>
+        <line num="41" count="5" type="stmt"/>
+        <line num="42" count="5" type="stmt"/>
+        <line num="43" count="5" type="stmt"/>
+        <line num="44" count="5" type="stmt"/>
+        <line num="45" count="5" type="stmt"/>
+        <line num="46" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="47" count="5" type="stmt"/>
+        <line num="48" count="5" type="stmt"/>
+        <line num="49" count="5" type="stmt"/>
+        <line num="50" count="5" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="52" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="53" count="3" type="stmt"/>
+        <line num="54" count="3" type="stmt"/>
+        <line num="55" count="3" type="stmt"/>
+        <line num="56" count="3" type="stmt"/>
+        <line num="57" count="3" type="stmt"/>
+        <line num="58" count="3" type="stmt"/>
+        <line num="59" count="3" type="stmt"/>
+        <line num="60" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="61" count="3" type="stmt"/>
+        <line num="62" count="3" type="stmt"/>
+        <line num="63" count="3" type="stmt"/>
+        <line num="64" count="3" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="66" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="67" count="1" type="stmt"/>
+        <line num="68" count="1" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
+        <line num="70" count="1" type="stmt"/>
+        <line num="71" count="1" type="stmt"/>
+        <line num="72" count="1" type="stmt"/>
+        <line num="73" count="1" type="stmt"/>
+        <line num="74" count="1" type="stmt"/>
+        <line num="75" count="1" type="stmt"/>
+        <line num="76" count="1" type="stmt"/>
+        <line num="77" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="78" count="1" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+        <line num="80" count="1" type="stmt"/>
+        <line num="81" count="1" type="stmt"/>
+        <line num="82" count="1" type="stmt"/>
       </file>
     </package>
   </project>
