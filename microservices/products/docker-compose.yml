@@ -21,8 +21,8 @@ services:
     image: node:latest
     container_name: product_microservice
     restart: always
-    env_file:
-      - .env
+    environment:
+      GRPC_PRODUCT_SERVER_URL: ${GRPC_PRODUCT_SERVER_URL}
     depends_on:
       - product_database
     ports:
