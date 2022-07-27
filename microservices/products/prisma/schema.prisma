@@ -11,12 +11,12 @@ datasource db {
 }
 
 model Products {
-  id              Int    @id @default(autoincrement())
-  thumbnail       String
-  nome            String
-  preco           String
-  ingredientes    String
-  disponibilidade String
-  volume          String
-  outros          String
+  id           String  @id @unique
+  thumbnail    String
+  name         String
+  price        Decimal
+  ingredients  String
+  availability Boolean
+  volume       String
+  others       String?
 }
