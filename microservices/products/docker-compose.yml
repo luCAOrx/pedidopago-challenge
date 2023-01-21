@@ -1,30 +1,30 @@
-version: "3.7"
+version: '3.7'
 
 services:
-  product_database:
+  product-database:
     image: mariadb
-    container_name: product_database
+    container_name: product-database
     restart: always
     ports:
-      - ${MARIADB_PORT}:${MARIADB_PORT}
+      - ${DATABASE_PORT}:${DATABASE_PORT}
     environment:
-      MARIADB_ROOT_USER: ${MARIADB_ROOT_USER}
-      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD}
-      MARIADB_ROOT_HOST: ${MARIADB_ROOT_HOST}
-      MARIADB_USER: ${MARIADB_USER}
-      MARIADB_PASSWORD: ${MARIADB_PASSWORD}
-      MARIADB_DATABASE: ${MARIADB_DATABASE}
+      MARIADB_ROOT_USER: ${DATABASE_ROOT_USER}
+      MARIADB_ROOT_PASSWORD: ${DATABASE_ROOT_PASSWORD}
+      MARIADB_ROOT_HOST: ${DATABASE_ROOT_HOST}
+      MARIADB_USER: ${DATABASE_USER}
+      MARIADB_PASSWORD: ${DATABASE_PASSWORD}
+      MARIADB_DATABASE: ${DATABASE_DATABASE}
     networks:
-      - pedidopago
+      - product-networks
 
-  product_microservice:
+  product-microservice:
     image: node:latest
-    container_name: product_microservice
+    container_name: product-microservice
     restart: always
     environment:
-      GRPC_PRODUCT_SERVER_URL: ${GRPC_PRODUCT_SERVER_URL}
+      GRPC_PRODUCT_SERVER_HOST: ${GRPC_PRODUCT_SERVER_HOST}
     depends_on:
-      - product_database
+      - product-database
     ports:
       - ${GRPC_PRODUCT_SERVER_PORT}:${GRPC_PRODUCT_SERVER_PORT}
     working_dir: /usr/app
@@ -32,9 +32,9 @@ services:
       - .:/usr/app
     command: yarn dev
     networks:
-      - pedidopago
+      - product-networks
 
 networks:
-  pedidopago:
-    name: pedidopago
+  product-networks:
+    name: product-networks
     driver: bridge
