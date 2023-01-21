@@ -34,33 +34,31 @@ export class ProductServer implements IProductServiceServer {
     call: ServerUnaryCall<CreateProductRequest, ProductResponse>,
     callback: sendUnaryData<ProductResponse>
   ) {
-    try {
-      const handler = new CreateProductHandler()
+    const handler = new CreateProductHandler()
 
-      const {
-        thumbnail,
-        name,
-        ingredients,
-        price,
-        volume,
-        availability,
-        others
-      } = call.request.toObject()
+    const {
+      thumbnail,
+      name,
+      ingredients,
+      price,
+      volume,
+      availability,
+      others
+    } = call.request.toObject()
 
-      await handler.handle({
-        thumbnail,
-        name,
-        ingredients,
-        price,
-        volume,
-        availability,
-        others
-      })
-
+    await handler.handle({
+      thumbnail,
+      name,
+      ingredients,
+      price,
+      volume,
+      availability,
+      others
+    }).then(() => {
       return callback(null, new ProductResponse())
-    } catch (error: any) {
+    }).catch(error => {
       return callback(error, null)
-    }
+    })
   }
 
   async cloneProduct (
