@@ -15,9 +15,11 @@ const bindPromise = promisify(server.bindAsync).bind(server)
 server.addService(ProductServiceService, new ProductServer())
 
 bindPromise(
-  `${process.env.GRPC_PRODUCT_SERVER_URL}`,
+  `${process.env.GRPC_PRODUCT_SERVER_HOST}:${process.env.GRPC_PRODUCT_SERVER_PORT}`,
   ServerCredentials.createInsecure()
 ).then(() => {
   server.start()
-  console.log(`listening on ${process.env.GRPC_PRODUCT_SERVER_PORT}`)
+  console.log(
+    `listening on ${process.env.GRPC_PRODUCT_SERVER_HOST}:${process.env.GRPC_PRODUCT_SERVER_PORT}`
+  )
 }).catch((error) => console.log(error))
