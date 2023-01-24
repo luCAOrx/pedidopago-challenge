@@ -20,3 +20,14 @@ Micro serviço de produto com [GRPC](https://grpc.io/) e [Express](https://expre
 - Para testes ponta a ponta (e2e) execute o comando `yarn test:e2e`
 - Para usar o modo de observação execute o comando `yarn test:watch`
 - Para usar o modo de cobertura execute o comando `yarn test:cov`
+
+## Comandos para manusear os containers
+- Para subir os containers execute o comando `sudo make up`
+- Para derrubar os containers execute o comando `sudo make down`
+- Para listar os containers execute o comando `sudo make list-containers`
+- Para entrar no container do banco de dados execute o comando `sudo make database-cli`
+- Para reiniciar o container do micro serviço execute o comando `sudo make restart-microservice`
+- Para reiniciar o container do banco de dados execute o comando `sudo make restart-database`
+- Para derrubar o container do micro serviço execute o comando `sudo make down-product-microservice`
+- Para visualizar os logs do container do micro serviço execute o comando `sudo make logs-microservice` 
+- Para visualizar os logs do container do banco de dados execute o comando `sudo make logs-database`
