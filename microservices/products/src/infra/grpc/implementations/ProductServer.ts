@@ -24,13 +24,14 @@ import {
   UpdateProductRequest,
   DeleteProductRequest,
   ProductResponse,
-  CreateProductRequest
+  CreateProductRequest,
+  Product
 } from '../proto/product_pb'
 
 export class ProductServer implements IProductServiceServer {
   [name: string]: UntypedHandleCall
 
-  async createProducts (
+  async createProduct (
     call: ServerUnaryCall<CreateProductRequest, ProductResponse>,
     callback: sendUnaryData<ProductResponse>
   ) {
@@ -55,7 +56,19 @@ export class ProductServer implements IProductServiceServer {
       availability,
       others
     }).then(() => {
-      return callback(null, new ProductResponse())
+      const response = new ProductResponse()
+      response.setProduct(
+        (new Product())
+          .setThumbnail(thumbnail)
+          .setName(name)
+          .setIngredients(ingredients)
+          .setPrice(price)
+          .setVolume(volume)
+          .setAvailability(availability)
+          .setOthers(others)
+      )
+
+      return callback(null, response)
     }).catch(error => {
       return callback(error, null)
     })
