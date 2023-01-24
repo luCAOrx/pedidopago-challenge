@@ -5,18 +5,18 @@ import { AvailabilityValidation, IngredientsValidation, NameValidation, OthersVa
 import { ProductRepository } from '../repositories/ProductRepository'
 import { ProductDoesNotExistsError } from './errors/ProductDoesNotExistsError'
 
-type UpdateProductRequest = { productId: string, data: CreateProductRequestDTO }
+type UpdateProductRequest = {productId: string, data: CreateProductRequestDTO}
 
 type UpdateProductResponse = Either<
-NameValidation |
-IngredientsValidation |
-AvailabilityValidation |
-VolumeValidation |
-PriceValidation |
-ThumbnailValidation |
-OthersValidation |
-ProductDoesNotExistsError,
-Product
+  NameValidation |
+  IngredientsValidation |
+  AvailabilityValidation |
+  VolumeValidation |
+  PriceValidation |
+  ThumbnailValidation |
+  OthersValidation |
+  ProductDoesNotExistsError,
+  Product
 >
 
 export class UpdateProductUseCase {
