@@ -10,10 +10,14 @@ export class InMemoryProductRepository implements ProductRepository {
     return product
   }
 
-  async findProductById (productId: string): Promise<Product> {
+  async findProductById (productId: string): Promise<Product | null> {
     const product = this.items.find(product => product.id === productId)
 
-    return Object(product)
+    if (!product) {
+      return null
+    }
+
+    return product
   }
 
   async cloneProduct (product: Product): Promise<Product> {
