@@ -3,7 +3,7 @@ import {
 } from '../repositories/prisma/PrismaProductRepository'
 import {
   GetProductInformationUseCase
-} from '../../domain/useCases/GetProductInformation'
+} from '../../domain/useCases/GetProductInformationUseCase'
 
 type GetProductInformationRequest = {
   query?: any
