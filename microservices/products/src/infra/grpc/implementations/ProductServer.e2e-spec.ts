@@ -1,7 +1,17 @@
 import 'dotenv/config'
 import { ChannelCredentials } from '@grpc/grpc-js'
 import { ProductServiceClient } from '../proto/product_grpc_pb'
-import { CreateProductRequest, ProductResponse } from '../proto/product_pb'
+import {
+  CloneProductRequest,
+  CreateProductRequest,
+  DeleteProductRequest,
+  GetProductInformationRequest,
+  ListAllProductsRequest,
+  ProductResponse,
+  UpdateProductRequest
+} from '../proto/product_pb'
+import { MakeProduct } from '../../../../test/factories/MakeProductFactory'
+import { Product } from '../../../domain/entities/Product'
 
 const productClient = new ProductServiceClient(
   `${process.env.GRPC_PRODUCT_SERVER_HOST}:${process.env.GRPC_PRODUCT_SERVER_PORT}`,
@@ -20,125 +30,93 @@ describe('Product server', () => {
       product.setVolume('100mg')
       product.setOthers('O medicamento deve ser mantido em temperatura ambiente')
 
-      productClient.createProducts(product, (err, product) => {
-        if (err) reject(err)
-        else resolve(product)
+      productClient.createProduct(product, (err, product) => {
+        if (err) {
+          reject(err)
+          console.log(err)
+        } else {
+          resolve(product)
 
-        console.log(product)
-
-        expect(product).toBeTruthy()
+          console.log(product)
+          expect(product).toBeTruthy()
+        }
       })
     })
   })
 
-  //   it('should be able to clone a product', async () => {
-  //     const id = randomUUID()
+  it('should be able to clone a product', async () => {
+    const { id } = (await new MakeProduct().toHandler()).value as Product
 
-  //     const createProduct = await prisma.products.create({
-  //       data: {
-  //         id,
-  //         name: 'Creatina',
-  //         ingredients: 'Aminoácidos essências',
-  //         availability: true,
-  //         volume: '300mg',
-  //         price: 30,
-  //         thumbnail: 'image.jpg',
-  //         others: 'Após deve ser mantido em temperatura ambiente'
-  //       }
-  //     })
+    const product = new CloneProductRequest()
 
-  //     const product = new CloneProductRequest()
+    product.setId(id)
 
-  //     product.setId(createProduct.id)
+    productClient.cloneProduct(product, (err, response) => {
+      if (err) return err.details
+      expect(response.toObject()).toBeTruthy()
+    })
+  })
 
-  //     productClient.cloneProduct(product, (err, response) => {
-  //       if (err) return err.details
-  //       expect(response.toObject()).toBeTruthy()
-  //     })
-  //   })
+  it('should be able get product information', async () => {
+    (await new MakeProduct().toHandler()).value as Product
 
-  //   it('should be able get product information', () => {
-  //     const product = new GetProductInformationRequest()
+    const product = new GetProductInformationRequest()
 
-  //     product.setQuery('Alb')
-  //     product.setPage('1')
+    product.setQuery('Alb')
+    product.setPage('1')
 
-  //     productClient.getProductInformation(product, (err, response) => {
-  //       if (err) return err.details
+    productClient.getProductInformation(product, (err, response) => {
+      if (err) return err.details
 
-  //       expect(response.toObject().productsList).toBeTruthy()
-  //     })
-  //   })
+      expect(response.toObject().productsList).toBeTruthy()
+    })
+  })
 
-  //   it('should be able list all products', () => {
-  //     const product = new ListAllProductsRequest()
-  //     product.setPage('1')
+  it('should be able list all products', async () => {
+    (await new MakeProduct().toHandler()).value as Product
 
-  //     productClient.listAllProducts(product, (err, response) => {
-  //       if (err) return err.details
+    const product = new ListAllProductsRequest()
+    product.setPage('1')
 
-  //       expect(response.toObject().productsList).toBeTruthy()
-  //     })
-  //   })
+    productClient.listAllProducts(product, (err, response) => {
+      if (err) return err.details
 
-  //   it('should be able to update a product', async () => {
-  //     const id = randomUUID()
+      expect(response.toObject().productsList).toBeTruthy()
+    })
+  })
 
-  //     const createProduct = await prisma.products.create({
-  //       data: {
-  //         id,
-  //         name: 'Polivitamínico',
-  //         ingredients: 'Aminoácidos essências, vitamina A',
-  //         availability: true,
-  //         volume: '300mg',
-  //         price: 30,
-  //         thumbnail: 'image.jpg',
-  //         others: 'Após aberto deve ser mantido em temperatura ambiente'
-  //       }
-  //     })
+  it('should be able to update a product', async () => {
+    const { id } = (await new MakeProduct().toHandler()).value as Product
 
-  //     const product = new UpdateProductRequest()
+    const product = new UpdateProductRequest()
 
-  //     product.setId(createProduct.id)
-  //     product.setThumbnail('image.jpg')
-  //     product.setName('Multivitamínico')
-  //     product.setPrice(5)
-  //     product.setIngredients('vitamina A, vitamina B, vitamina C')
-  //     product.setAvailability(true)
-  //     product.setVolume('200mg')
-  //     product.setOthers('O medicamento deve ser mantido em temperatura ambiente')
+    product.setId(id)
+    product.setThumbnail('image.jpg')
+    product.setName('Multivitamínico')
+    product.setPrice(5)
+    product.setIngredients('vitamina A, vitamina B, vitamina C')
+    product.setAvailability(true)
+    product.setVolume('200mg')
+    product.setOthers('O medicamento deve ser mantido em temperatura ambiente')
 
-  //     productClient.updateProduct(product, (err, response) => {
-  //       if (err) return err.details
+    productClient.updateProduct(product, (err, response) => {
+      if (err) return err.details
 
-  //       expect(response.toObject()).toBeTruthy()
-  //     })
-  //   })
+      expect(response.toObject()).toBeTruthy()
+    })
+  })
 
-  //   it('should be able to delete a product', async () => {
-  //     const id = randomUUID()
+  it('should be able to delete a product', async () => {
+    const { id } = (await new MakeProduct().toHandler()).value as Product
 
-  //     const createProduct = await prisma.products.create({
-  //       data: {
-  //         id,
-  //         name: 'Polivitamínico',
-  //         ingredients: 'Aminoácidos essências, vitamina A',
-  //         availability: true,
-  //         volume: '300mg',
-  //         price: 30,
-  //         thumbnail: 'image.jpg',
-  //         others: 'Após aberto deve ser mantido em temperatura ambiente'
-  //       }
-  //     })
+    const product = new DeleteProductRequest()
 
-  //     const product = new DeleteProductRequest()
+    product.setId(id)
 
-  //     product.setId(createProduct.id)
+    productClient.deleteProduct(product, (err, response) => {
+      if (err) return err
 
-  //     productClient.deleteProduct(product, (err, response) => {
-  //       if (err) return err
-
-  //       expect(response.toObject()).toBeTruthy()
-  //     })
-  //   })
+      expect(response.toObject()).toBeTruthy()
+    })
+  })
 })
