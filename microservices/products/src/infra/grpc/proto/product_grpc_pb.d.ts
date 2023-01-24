@@ -8,7 +8,7 @@ import * as grpc from "@grpc/grpc-js";
 import * as product_pb from "./product_pb";
 
 interface IProductServiceService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
-    createProducts: IProductServiceService_IcreateProducts;
+    createProduct: IProductServiceService_IcreateProduct;
     cloneProduct: IProductServiceService_IcloneProduct;
     getProductInformation: IProductServiceService_IgetProductInformation;
     listAllProducts: IProductServiceService_IlistAllProducts;
@@ -16,8 +16,8 @@ interface IProductServiceService extends grpc.ServiceDefinition<grpc.UntypedServ
     deleteProduct: IProductServiceService_IdeleteProduct;
 }
 
-interface IProductServiceService_IcreateProducts extends grpc.MethodDefinition<product_pb.CreateProductRequest, product_pb.ProductResponse> {
-    path: "/product.ProductService/createProducts";
+interface IProductServiceService_IcreateProduct extends grpc.MethodDefinition<product_pb.CreateProductRequest, product_pb.ProductResponse> {
+    path: "/product.ProductService/createProduct";
     requestStream: false;
     responseStream: false;
     requestSerialize: grpc.serialize<product_pb.CreateProductRequest>;
@@ -74,7 +74,7 @@ interface IProductServiceService_IdeleteProduct extends grpc.MethodDefinition<pr
 export const ProductServiceService: IProductServiceService;
 
 export interface IProductServiceServer extends grpc.UntypedServiceImplementation {
-    createProducts: grpc.handleUnaryCall<product_pb.CreateProductRequest, product_pb.ProductResponse>;
+    createProduct: grpc.handleUnaryCall<product_pb.CreateProductRequest, product_pb.ProductResponse>;
     cloneProduct: grpc.handleUnaryCall<product_pb.CloneProductRequest, product_pb.ProductResponse>;
     getProductInformation: grpc.handleUnaryCall<product_pb.GetProductInformationRequest, product_pb.ProductListResponse>;
     listAllProducts: grpc.handleUnaryCall<product_pb.ListAllProductsRequest, product_pb.ProductListResponse>;
@@ -83,9 +83,9 @@ export interface IProductServiceServer extends grpc.UntypedServiceImplementation
 }
 
 export interface IProductServiceClient {
-    createProducts(request: product_pb.CreateProductRequest, callback: (error: grpc.ServiceError | null, response: product_pb.ProductResponse) => void): grpc.ClientUnaryCall;
-    createProducts(request: product_pb.CreateProductRequest, metadata: grpc.Metadata, callback: (error: grpc.ServiceError | null, response: product_pb.ProductResponse) => void): grpc.ClientUnaryCall;
-    createProducts(request: product_pb.CreateProductRequest, metadata: grpc.Metadata, options: Partial<grpc.CallOptions>, callback: (error: grpc.ServiceError | null, response: product_pb.ProductResponse) => void): grpc.ClientUnaryCall;
+    createProduct(request: product_pb.CreateProductRequest, callback: (error: grpc.ServiceError | null, response: product_pb.ProductResponse) => void): grpc.ClientUnaryCall;
+    createProduct(request: product_pb.CreateProductRequest, metadata: grpc.Metadata, callback: (error: grpc.ServiceError | null, response: product_pb.ProductResponse) => void): grpc.ClientUnaryCall;
+    createProduct(request: product_pb.CreateProductRequest, metadata: grpc.Metadata, options: Partial<grpc.CallOptions>, callback: (error: grpc.ServiceError | null, response: product_pb.ProductResponse) => void): grpc.ClientUnaryCall;
     cloneProduct(request: product_pb.CloneProductRequest, callback: (error: grpc.ServiceError | null, response: product_pb.ProductResponse) => void): grpc.ClientUnaryCall;
     cloneProduct(request: product_pb.CloneProductRequest, metadata: grpc.Metadata, callback: (error: grpc.ServiceError | null, response: product_pb.ProductResponse) => void): grpc.ClientUnaryCall;
     cloneProduct(request: product_pb.CloneProductRequest, metadata: grpc.Metadata, options: Partial<grpc.CallOptions>, callback: (error: grpc.ServiceError | null, response: product_pb.ProductResponse) => void): grpc.ClientUnaryCall;
@@ -105,9 +105,9 @@ export interface IProductServiceClient {
 
 export class ProductServiceClient extends grpc.Client implements IProductServiceClient {
     constructor(address: string, credentials: grpc.ChannelCredentials, options?: Partial<grpc.ClientOptions>);
-    public createProducts(request: product_pb.CreateProductRequest, callback: (error: grpc.ServiceError | null, response: product_pb.ProductResponse) => void): grpc.ClientUnaryCall;
-    public createProducts(request: product_pb.CreateProductRequest, metadata: grpc.Metadata, callback: (error: grpc.ServiceError | null, response: product_pb.ProductResponse) => void): grpc.ClientUnaryCall;
-    public createProducts(request: product_pb.CreateProductRequest, metadata: grpc.Metadata, options: Partial<grpc.CallOptions>, callback: (error: grpc.ServiceError | null, response: product_pb.ProductResponse) => void): grpc.ClientUnaryCall;
+    public createProduct(request: product_pb.CreateProductRequest, callback: (error: grpc.ServiceError | null, response: product_pb.ProductResponse) => void): grpc.ClientUnaryCall;
+    public createProduct(request: product_pb.CreateProductRequest, metadata: grpc.Metadata, callback: (error: grpc.ServiceError | null, response: product_pb.ProductResponse) => void): grpc.ClientUnaryCall;
+    public createProduct(request: product_pb.CreateProductRequest, metadata: grpc.Metadata, options: Partial<grpc.CallOptions>, callback: (error: grpc.ServiceError | null, response: product_pb.ProductResponse) => void): grpc.ClientUnaryCall;
     public cloneProduct(request: product_pb.CloneProductRequest, callback: (error: grpc.ServiceError | null, response: product_pb.ProductResponse) => void): grpc.ClientUnaryCall;
     public cloneProduct(request: product_pb.CloneProductRequest, metadata: grpc.Metadata, callback: (error: grpc.ServiceError | null, response: product_pb.ProductResponse) => void): grpc.ClientUnaryCall;
     public cloneProduct(request: product_pb.CloneProductRequest, metadata: grpc.Metadata, options: Partial<grpc.CallOptions>, callback: (error: grpc.ServiceError | null, response: product_pb.ProductResponse) => void): grpc.ClientUnaryCall;

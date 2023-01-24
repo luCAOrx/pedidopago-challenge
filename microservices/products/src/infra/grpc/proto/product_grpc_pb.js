@@ -105,8 +105,8 @@ function deserialize_product_UpdateProductRequest(buffer_arg) {
 
 
 var ProductServiceService = exports.ProductServiceService = {
-  createProducts: {
-    path: '/product.ProductService/createProducts',
+  createProduct: {
+    path: '/product.ProductService/createProduct',
     requestStream: false,
     responseStream: false,
     requestType: product_pb.CreateProductRequest,

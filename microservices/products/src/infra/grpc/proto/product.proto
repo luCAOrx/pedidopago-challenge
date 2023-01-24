@@ -62,14 +62,14 @@ message ProductListResponse {
 message Nothing {}
 
 service ProductService {
-  rpc createProducts(CreateProductRequest) returns (ProductResponse) {};
-  rpc cloneProduct(CloneProductRequest) returns (ProductResponse) {};
+  rpc createProduct(CreateProductRequest) returns (ProductResponse);
+  rpc cloneProduct(CloneProductRequest) returns (ProductResponse);
   rpc getProductInformation(GetProductInformationRequest) returns (
     ProductListResponse
-  ) {};
+  );
   rpc listAllProducts(ListAllProductsRequest) returns (
     ProductListResponse
-  ) {};
-  rpc updateProduct(UpdateProductRequest) returns (ProductResponse) {};
-  rpc deleteProduct(DeleteProductRequest) returns (Nothing) {};
+  );
+  rpc updateProduct(UpdateProductRequest) returns (ProductResponse);
+  rpc deleteProduct(DeleteProductRequest) returns (Nothing);
 }
